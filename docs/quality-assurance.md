@@ -2,21 +2,19 @@
 
 Stand: 1. September 2026
 
-Die vollständige Website-Fassung wurde vor der Übergabe mit folgenden Prüfungen abgesichert:
+Der Release wurde mit folgenden reproduzierbaren Prüfungen abgesichert:
 
-- Inhaltsvalidierung: 10 eindeutige Leistungsseiten und 12 eindeutige Wissensbeiträge
+- Inhaltsvalidierung: 10 eindeutige Leistungsseiten und 13 eindeutige Wissensbeiträge
 - TypeScript-Prüfung ohne Fehler
-- Next.js-Produktionsbuild ohne Fehler
-- automatisierter Abruf sämtlicher intern verlinkter Seiten ohne fehlerhafte interne Route
-- visuelle Prüfung repräsentativer Desktop- und Mobilansichten
-- automatisierter Axe-Scan der zentralen Seitentypen ohne schwerwiegende oder kritische Befunde
-- Formularprüfung für ungültige Eingaben und sicheren, noch nicht konfigurierten Vorabmodus
-- Prüfung von `robots.txt`, Sitemap, RSS, 404-Seite und Security-Text
+- vollständiger Next.js-Produktionsbuild ohne Fehler
+- Generierung von 42 statischen und dynamischen Routen
+- automatisierter Abruf aller intern verlinkten Seiten ohne fehlerhafte Route
+- Prüfung von ungültigem Formularinhalt und sicherem Vorschauverhalten bei fehlendem Versandkonto
+- Prüfung von `robots.txt`, Sitemap, RSS, Manifest, OpenGraph-Endpunkt und Security-Text
+- standardmäßige Sperre der Suchmaschinenindexierung bis zur bewussten Livefreigabe
 
-## Dauerhafter Qualitätsprozess
+Der Workflow `.github/workflows/quality.yml` wiederholt Inhaltsprüfung, TypeScript-Prüfung und Produktionsbuild bei künftigen Änderungen.
 
-Der Workflow `.github/workflows/quality.yml` führt bei künftigen Änderungen Inhaltsprüfung, TypeScript-Prüfung und Produktionsbuild aus. Die Website bleibt standardmäßig nicht indexierbar, bis Betreiberangaben vollständig sind und `NEXT_PUBLIC_SITE_LIVE=true` gesetzt wird.
+## Vor dem Livegang
 
-## Grenzen dieser Prüfung
-
-Die technische Prüfung ersetzt nicht die vor dem Livegang erforderliche juristische Prüfung von Marke, Anbieterkennzeichnung, Datenschutz, Vertragsunterlagen und den tatsächlich angebotenen Leistungsumfängen. Ebenso wurden keine erfundenen Referenzen oder nicht belegten Leistungsversprechen ergänzt.
+Eine technische Prüfung ersetzt nicht die erforderliche rechtliche und betriebliche Prüfung von Marke, Anbieterkennzeichnung, Datenschutz, Verträgen, Versicherungen und den tatsächlich angebotenen Leistungen. Ebenso müssen responsive Darstellung und Browserkompatibilität auf den realen Zielgeräten im veröffentlichten Vorschaustand abschließend abgenommen werden.
