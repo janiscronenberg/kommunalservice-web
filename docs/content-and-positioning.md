@@ -13,7 +13,7 @@ Leistungen und Wissensbeiträge liegen zentral in `lib/content.ts`. Jede Leistun
 - konkrete Liefergegenstände
 - Prozessschritte
 - ausdrückliche Ausschlüsse
-- Pilotumfang und FAQ
+- typischer Auftragsumfang und FAQ
 - interne Verknüpfung mit passenden Wissensbeiträgen
 
 ## Neue Inhalte

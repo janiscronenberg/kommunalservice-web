@@ -28,7 +28,7 @@ export type Service = {
   deliverables: string[];
   process: string[];
   boundaries: string[];
-  pilot: string;
+  typicalScope: string;
   faq: Faq[];
   relatedArticles: string[];
 };
@@ -54,9 +54,9 @@ export type KnowledgeArticle = {
 
 export const siteConfig = {
   name: "KommunalRoutine",
-  claim: "Routine raus. Verwaltung frei.",
+  claim: "Kommunale Dienstleistungen",
   description:
-    "Externe Erfassungs-, Dokumentations- und Routinedienstleistungen für Städte, Gemeinden und kommunale Betriebe.",
+    "Verlässliche Außendienst-, Dokumentations- und Backoffice-Leistungen für Städte, Gemeinden und kommunale Betriebe.",
 };
 
 export const services: Service[] = [
@@ -67,7 +67,7 @@ export const services: Service[] = [
     shortTitle: "Kommunale Rundgänge",
     eyebrow: "Eine Route, mehrere Aufgaben",
     summary:
-      "Wiederkehrende Erfassungsrouten für mehrere kleine Aufgaben im öffentlichen Raum – gebündelt, dokumentiert und nach Ihrem Kriterienkatalog.",
+      "Wir fahren festgelegte Gemeinderouten ab, erfassen mehrere Aufgaben in einem Durchgang und übergeben eine vollständige, sortierte Ergebnisliste.",
     problem:
       "Viele kleine Außendienstaufgaben sind einzeln zu aufwendig, um sie konsequent zu terminieren. Gleichzeitig binden spontane Einzelwege wertvolle Zeit im Bauhof und in der Verwaltung.",
     benefit:
@@ -86,10 +86,10 @@ export const services: Service[] = [
       "optional wiederkehrender Monats-, Quartals- oder Saisonturnus",
     ],
     process: [
-      "Route und Merkmale gemeinsam festlegen",
-      "eine abgegrenzte Pilotrunde durchführen",
-      "Ergebnisformat mit der Fachstelle abstimmen",
-      "nur bei echtem Nutzen in einen Turnus überführen",
+      "Route, Turnus und Erfassungsmerkmale festlegen",
+      "Übergabeformat und Meldewege abstimmen",
+      "Gemeinderunde zum vereinbarten Termin durchführen",
+      "Ergebnisse vollständig übergeben und Turnus fortführen",
     ],
     boundaries: [
       "keine hoheitliche Kontrolle oder Entscheidung",
@@ -97,7 +97,7 @@ export const services: Service[] = [
       "keine technische oder sachverständige Prüfung",
       "keine automatische Mängelfreigabe oder Abnahme",
     ],
-    pilot:
+    typicalScope:
       "Ein Ortsteil oder eine definierte Route mit bis zu drei Erfassungsmodulen und vollständiger Ergebnisübergabe.",
     faq: [
       {
@@ -111,15 +111,15 @@ export const services: Service[] = [
           "Nein. Die Übergabe kann zunächst in einem vorhandenen Format erfolgen. Eine Systemanbindung ist nur sinnvoll, wenn sie den Ablauf wirklich vereinfacht.",
       },
       {
-        question: "Wer bewertet einen gemeldeten Mangel?",
+        question: "Wie werden dringende Auffälligkeiten gemeldet?",
         answer:
-          "Die zuständige kommunale Fachstelle. KommunalRoutine erfasst sichtbare Zustände und bereitet Daten auf, trifft aber keine fachliche oder hoheitliche Entscheidung.",
+          "Für zuvor definierte Fälle vereinbaren wir einen direkten Meldeweg. Die reguläre Ergebnisliste wird unabhängig davon vollständig und priorisiert übergeben.",
       },
     ],
     relatedArticles: [
       "kommunale-routineaufgaben-auslagern",
       "gemeinderundgang-mit-kriterienkatalog",
-      "sichtkontrolle-oder-fachpruefung",
+      "kommunale-leistung-richtig-beschreiben",
     ],
   },
   {
@@ -129,7 +129,7 @@ export const services: Service[] = [
     shortTitle: "Starkregenpunkte",
     eyebrow: "Bekannte Punkte im Blick behalten",
     summary:
-      "Kritische Einläufe, Rechen, Durchlässe und Abflusswege nach kommunaler Vorgabe anfahren, fotografieren und Auffälligkeiten zügig melden.",
+      "Wir fahren bekannte Einläufe, Rechen, Durchlässe und Abflusswege ab, dokumentieren ihren sichtbaren Zustand und melden vereinbarte Auffälligkeiten unmittelbar.",
     problem:
       "Gefahrenkarten und Handlungskonzepte benennen kritische Punkte. Im Alltag fehlt jedoch häufig die Zeit, diese Stellen wiederkehrend anzufahren und ihren sichtbaren Zustand nachvollziehbar festzuhalten.",
     benefit:
@@ -148,10 +148,10 @@ export const services: Service[] = [
       "optional Vorher-/Nachher-Vergleich",
     ],
     process: [
-      "Kommune liefert Punkte und Beobachtungskriterien",
-      "Pilotroute und Meldeweg werden getestet",
-      "Dokumentationsrunde wird zum vereinbarten Anlass gefahren",
-      "Fachstelle bewertet und veranlasst weitere Maßnahmen",
+      "Standorte, Auslöser und Merkmale übernehmen",
+      "Route, Reaktionszeit und Sofortmeldeweg festlegen",
+      "Dokumentationsrunde zum vereinbarten Anlass fahren",
+      "Fotoliste und priorisierte Auffälligkeiten übergeben",
     ],
     boundaries: [
       "keine hydraulische oder wasserrechtliche Bewertung",
@@ -159,13 +159,13 @@ export const services: Service[] = [
       "keine Reinigung, sofern nicht separat fachgerecht vergeben",
       "keine Garantie der Funktions- oder Überflutungssicherheit",
     ],
-    pilot:
+    typicalScope:
       "Dokumentation einer kompakten Route bekannter Starkregenpunkte mit abgestimmter Ampel- und Fotoliste.",
     faq: [
       {
-        question: "Ist das eine technische Kontrolle der Entwässerung?",
+        question: "Was wird an den Standorten festgehalten?",
         answer:
-          "Nein. Erfasst wird ausschließlich der sichtbare Zustand nach den Kriterien der Kommune. Technische und hydraulische Bewertungen bleiben bei den Fachstellen.",
+          "Je nach Auftrag beispielsweise freie oder bedeckte Öffnungen, sichtbare Ablagerungen, Bewuchs, Beschädigungen sowie die Zugänglichkeit. Dazu kommen Foto, Standort und Zeitstempel.",
       },
       {
         question: "Kann die Runde kurzfristig vor Starkregen erfolgen?",
@@ -181,7 +181,7 @@ export const services: Service[] = [
     relatedArticles: [
       "starkregenpunkte-regelmaessig-dokumentieren",
       "gemeinderundgang-mit-kriterienkatalog",
-      "sichtkontrolle-oder-fachpruefung",
+      "kommunale-leistung-richtig-beschreiben",
     ],
   },
   {
@@ -191,7 +191,7 @@ export const services: Service[] = [
     shortTitle: "Überwuchserfassung",
     eyebrow: "Saisonale Auffälligkeiten strukturiert aufnehmen",
     summary:
-      "Sichtbaren Überwuchs an Gehwegen, Fahrbahnen, Schildern und Sichtbereichen geordnet mit Foto und Standort für die kommunale Bearbeitung erfassen.",
+      "Wir erfassen Überwuchs an Gehwegen, Fahrbahnen, Schildern und Sichtbereichen gebietsweise mit Foto, Standort und einheitlicher Kategorie.",
     problem:
       "Vegetation wächst saisonal und verteilt sich über das gesamte Gemeindegebiet. Gerade die systematische Erstaufnahme beansprucht viel Außendienstzeit.",
     benefit:
@@ -221,8 +221,8 @@ export const services: Service[] = [
       "keine behördliche Aufforderung an Eigentümer",
       "kein Rückschnitt oder Eingriff in Vegetation",
     ],
-    pilot:
-      "Eine abgegrenzte Befahrung eines Ortsteils mit kommunal abgestimmten Beispielen und Ergebnisliste.",
+    typicalScope:
+      "Befahrung eines Ortsteils oder definierten Straßennetzes mit vollständiger Foto- und Standortliste.",
     faq: [
       {
         question: "Wird das Lichtraumprofil vermessen?",
@@ -237,13 +237,13 @@ export const services: Service[] = [
       {
         question: "Ist eine flächendeckende Befahrung möglich?",
         answer:
-          "Ja. Sinnvoll ist meist ein Pilotgebiet, aus dem sich Aufwand, Routendichte und ein belastbarer Gesamtpreis ableiten lassen.",
+          "Ja. Abhängig von Straßennetz und gewünschter Erfassungstiefe kann die Leistung ortsteilweise oder für das gesamte Gemeindegebiet angeboten werden.",
       },
     ],
     relatedArticles: [
       "lichtraumprofil-kommunal-erfassen",
       "gemeinderundgang-mit-kriterienkatalog",
-      "sichtkontrolle-oder-fachpruefung",
+      "kommunale-leistung-richtig-beschreiben",
     ],
   },
   {
@@ -253,7 +253,7 @@ export const services: Service[] = [
     shortTitle: "Mängelmelder-Backoffice",
     eyebrow: "Eingänge vorsortieren, Fachstellen entlasten",
     summary:
-      "Eingehende Meldungen im bestehenden System sichten, Dubletten kennzeichnen, nach Vorgabe kategorisieren und an zuständige Stellen vorbereiten.",
+      "Wir bearbeiten den Eingang Ihres bestehenden Mängelmelders: sichten, Dubletten erkennen, kategorisieren, Zuständigkeiten zuordnen und Rückfragen vorbereiten.",
     problem:
       "Ein digitaler Mängelmelder bündelt den Eingangskanal, beseitigt aber nicht die tägliche Sichtungs-, Datenschutz- und Sortierarbeit.",
     benefit:
@@ -273,9 +273,9 @@ export const services: Service[] = [
     ],
     process: [
       "Rollen, Freigaben und Datenschutzrahmen definieren",
-      "Testbetrieb mit begrenzter Kategorie starten",
-      "Entscheidungsfälle konsequent an die Kommune geben",
-      "Bearbeitungsregeln anhand des Piloten schärfen",
+      "Kategorien, Zuständigkeiten und Bearbeitungszeiten übernehmen",
+      "Eingänge nach vereinbarten Regeln laufend bearbeiten",
+      "Sonderfälle und Rückfragen gesammelt vorlegen",
     ],
     boundaries: [
       "keine Sach- oder Rechtsentscheidung",
@@ -283,13 +283,13 @@ export const services: Service[] = [
       "keine eigenständige Zusage kommunaler Maßnahmen",
       "Produktivbetrieb nur mit passender Datenschutz- und AVV-Struktur",
     ],
-    pilot:
-      "Vier Wochen Eingangsbearbeitung für ausgewählte Kategorien mit dokumentierter Zuständigkeits- und Eskalationsmatrix.",
+    typicalScope:
+      "Laufende Eingangsbearbeitung für vereinbarte Kategorien und Mengen mit Zuständigkeits- und Eskalationsmatrix.",
     faq: [
       {
         question: "Braucht die Kommune ein neues Mängelmeldersystem?",
         answer:
-          "Nein. Ziel ist die Bedienung des bestehenden Prozesses. Vor dem Pilot wird lediglich geklärt, wie ein sicherer Zugriff oder eine geeignete Übergabe möglich ist.",
+          "Nein. Wir arbeiten im bestehenden Prozess oder mit einem sicheren Export. Zugriff, Rollen und Übergabe werden vor Auftragsbeginn abgestimmt.",
       },
       {
         question: "Wer entscheidet, ob eine Meldung berechtigt ist?",
@@ -345,7 +345,7 @@ export const services: Service[] = [
       "keine Prüfung des Katastrophenschutzkonzepts",
       "keine medizinische oder sicherheitstechnische Fachprüfung",
     ],
-    pilot:
+    typicalScope:
       "Vollständige organisatorische Inventur eines Standorts anhand der vorhandenen Soll-Liste.",
     faq: [
       {
@@ -367,7 +367,7 @@ export const services: Service[] = [
     relatedArticles: [
       "notfalltreffpunkt-inventur-planen",
       "checklisten-und-bestandsdaten-pflegen",
-      "sichtkontrolle-oder-fachpruefung",
+      "kommunale-leistung-richtig-beschreiben",
     ],
   },
   {
@@ -377,7 +377,7 @@ export const services: Service[] = [
     shortTitle: "Aufbruchdokumentation",
     eyebrow: "Zustände verlässlich festhalten",
     summary:
-      "Vorher-, Zwischen- und Abschlusszustände von Aufbruchstellen standardisiert fotografieren und geordnet für die fachliche Bearbeitung übergeben.",
+      "Wir dokumentieren Ausgangs-, Zwischen- und Abschlusszustände von Aufbruchstellen nach einem festen Foto- und Benennungsschema.",
     problem:
       "Bei vielen laufenden Aufbruchstellen fehlt oft nicht die Fachkompetenz, sondern die Zeit für eine konsistente Vor-Ort-Dokumentation.",
     benefit:
@@ -397,9 +397,9 @@ export const services: Service[] = [
     ],
     process: [
       "Fotopunkte und Benennungskonvention festlegen",
-      "Pilotvorgang gemeinsam abgleichen",
+      "Termine und Vorgangszuordnung übernehmen",
       "Aufnahmen zum beauftragten Zeitpunkt erstellen",
-      "Fachstelle nimmt Bewertung und Abnahme vor",
+      "Bildserien und Hinweisliste geordnet übergeben",
     ],
     boundaries: [
       "keine technische Abnahme oder Bauüberwachung",
@@ -407,7 +407,7 @@ export const services: Service[] = [
       "keine Gewährleistungs- oder Kostenentscheidung",
       "keine Verkehrsfreigabe",
     ],
-    pilot:
+    typicalScope:
       "Eine abgeschlossene Aufbruchstelle mit Vorher-/Nachher-Protokoll nach Ihrer Benennungs- und Ablagestruktur.",
     faq: [
       {
@@ -429,7 +429,7 @@ export const services: Service[] = [
     relatedArticles: [
       "strassenaufbrueche-fotografisch-dokumentieren",
       "gemeinderundgang-mit-kriterienkatalog",
-      "sichtkontrolle-oder-fachpruefung",
+      "kommunale-leistung-richtig-beschreiben",
     ],
   },
   {
@@ -439,7 +439,7 @@ export const services: Service[] = [
     shortTitle: "Stadtmobiliar",
     eyebrow: "Bestände aus dem öffentlichen Raum nutzbar machen",
     summary:
-      "Bänke, Abfallbehälter, Poller, Spender, Schaukästen und weitere Standorte nach einheitlichem Schema aufnehmen oder vorhandene Daten aktualisieren.",
+      "Wir erfassen Bänke, Abfallbehälter, Poller, Spender, Schaukästen und weitere Objekte mit Standort, Foto, ID und vereinbarten Stammdaten.",
     problem:
       "Kleinteilige Bestände sind oft über Listen, Köpfe und einzelne Fachbereiche verteilt. Für Planung und Unterhaltung fehlt dann eine verlässliche Ausgangsbasis.",
     benefit:
@@ -469,7 +469,7 @@ export const services: Service[] = [
       "keine Eigentums- oder Zuständigkeitsentscheidung",
       "keine Wartungsfreigabe",
     ],
-    pilot:
+    typicalScope:
       "Erstaufnahme einer Objektart in einem abgegrenzten Quartier inklusive abgestimmtem Datenexport.",
     faq: [
       {
@@ -501,7 +501,7 @@ export const services: Service[] = [
     shortTitle: "Aushangservice",
     eyebrow: "Aushangrouten nachvollziehbar dokumentieren",
     summary:
-      "Vorgegebene Dokumente an kommunalen Aushangstellen anbringen, austauschen oder abnehmen und jeden Schritt mit Zeit und Foto protokollieren.",
+      "Wir bringen freigegebene Unterlagen an Ihren Bekanntmachungstafeln an, tauschen sie fristgerecht aus und dokumentieren Anbringung und Abnahme.",
     problem:
       "Verteilte Aushangstellen verursachen wiederkehrende Fahrten und kleinteilige Terminüberwachung, obwohl die inhaltliche Entscheidung längst getroffen ist.",
     benefit:
@@ -531,7 +531,7 @@ export const services: Service[] = [
       "keine Änderung freigegebener Unterlagen",
       "keine Zusicherung der rechtlichen Wirksamkeit",
     ],
-    pilot:
+    typicalScope:
       "Ein vollständiger Aushang- und Abnahmezyklus auf einer kompakten, vorgegebenen Route.",
     faq: [
       {
@@ -563,7 +563,7 @@ export const services: Service[] = [
     shortTitle: "Fahrräder & Plakatierung",
     eyebrow: "Auffällige Standorte als Entscheidungsgrundlage erfassen",
     summary:
-      "Mutmaßlich aufgegebene Fahrräder oder auffällige Plakatierungen mit Foto, Standort und kommunal definierten Merkmalen vorerfassen.",
+      "Wir erfassen auffällige Fahrräder und Plakatierungen gebietsweise mit Foto, Standort, Fallnummer und den von Ihnen vorgegebenen Merkmalen.",
     problem:
       "Verteilte Einzelfälle müssen zunächst gefunden und sauber zugeordnet werden, bevor die Verwaltung überhaupt rechtlich und fachlich entscheiden kann.",
     benefit:
@@ -593,7 +593,7 @@ export const services: Service[] = [
       "keine Halterermittlung",
       "keine ordnungsrechtliche Tätigkeit",
     ],
-    pilot:
+    typicalScope:
       "Ein abgegrenztes Bahnhofs-, Innenstadt- oder Quartiersgebiet mit vollständiger, nummerierter Fallliste.",
     faq: [
       {
@@ -615,7 +615,7 @@ export const services: Service[] = [
     relatedArticles: [
       "auffaellige-fahrraeder-vorerfassen",
       "gemeinderundgang-mit-kriterienkatalog",
-      "sichtkontrolle-oder-fachpruefung",
+      "kommunale-leistung-richtig-beschreiben",
     ],
   },
   {
@@ -625,7 +625,7 @@ export const services: Service[] = [
     shortTitle: "Checklisten & Datenpflege",
     eyebrow: "Kleine Datenbestände dauerhaft aktuell halten",
     summary:
-      "Kommunale Listen, Standorte, Ansprechpartner und wiederkehrende Prüftermine nach klaren Regeln abgleichen, ergänzen und für Fachstellen vorbereiten.",
+      "Wir gleichen kommunale Listen, Standorte, Ansprechpartner und wiederkehrende Termine ab, kennzeichnen Lücken und dokumentieren jede Änderung.",
     problem:
       "Viele kleine Bestände sind für den Alltag wichtig, aber zu verteilt und zu selten genutzt, um im Tagesgeschäft konsequent gepflegt zu werden.",
     benefit:
@@ -645,7 +645,7 @@ export const services: Service[] = [
     ],
     process: [
       "Datenquelle, Verantwortlichkeit und Regeln klären",
-      "kleinen Datenbestand als Pilot bearbeiten",
+      "Datenbestand strukturiert abgleichen und bereinigen",
       "unklare Fälle getrennt zur Entscheidung vorlegen",
       "Pflegeintervall und Übergabe festlegen",
     ],
@@ -655,13 +655,13 @@ export const services: Service[] = [
       "keine Rechts- oder Vollständigkeitsgarantie",
       "Zugriff auf personenbezogene Daten nur mit passendem Datenschutzrahmen",
     ],
-    pilot:
+    typicalScope:
       "Bereinigung und strukturierte Rückgabe eines klar abgegrenzten Datenbestands mit Änderungsprotokoll.",
     faq: [
       {
         question: "Welche Dateiformate sind möglich?",
         answer:
-          "Typischerweise Excel, CSV oder exportierte Systemlisten. Andere Formate werden im Pilot auf Eignung und sicheren Austausch geprüft.",
+          "Typischerweise Excel, CSV oder exportierte Systemlisten. Andere Formate prüfen wir anhand des konkreten Datenbestands und des vorgesehenen Austauschs.",
       },
       {
         question: "Wer entscheidet bei unklaren Daten?",
@@ -671,7 +671,7 @@ export const services: Service[] = [
       {
         question: "Kann daraus ein regelmäßiger Prozess werden?",
         answer:
-          "Ja. Nach einem Pilot lassen sich Umfang, Intervall, Eingangsquelle und Rückgabeformat belastbar festlegen.",
+          "Ja. Umfang, Intervall, Eingangsquelle und Rückgabeformat können als wiederkehrender Pflegeprozess vereinbart werden.",
       },
     ],
     relatedArticles: [
@@ -688,7 +688,7 @@ export const knowledgeArticles: KnowledgeArticle[] = [
     title: "Kommunale Routineaufgaben auslagern: Was sich wirklich eignet",
     eyebrow: "Organisation",
     summary:
-      "Nicht jede Aufgabe gehört nach außen. Gut auslagerbar sind klar beschreibbare Routinen mit messbarem Ergebnis und einer eindeutigen Entscheidungsgrenze.",
+      "Welche wiederkehrenden Aufgaben externe Dienstleister sinnvoll übernehmen können – und welche Angaben eine brauchbare Leistungsbeschreibung braucht.",
     readingMinutes: 6,
     updated: "2026-09-01",
     serviceSlug: "kommunale-rundgaenge",
@@ -703,7 +703,7 @@ export const knowledgeArticles: KnowledgeArticle[] = [
       {
         heading: "Vier Merkmale einer geeigneten Routine",
         paragraphs: [
-          "Ein Pilot sollte nur gestartet werden, wenn Zuständigkeit und Leistungsgrenze schon vor dem ersten Einsatz verständlich sind.",
+          "Ein externer Auftrag funktioniert besonders gut, wenn Umfang, Bearbeitung und Ergebnis vor dem ersten Einsatz verständlich beschrieben sind.",
         ],
         bullets: [
           "wiederkehrender oder gebündelter Bedarf",
@@ -713,7 +713,7 @@ export const knowledgeArticles: KnowledgeArticle[] = [
         ],
       },
       {
-        heading: "Warum ein Pilot wichtiger ist als ein langes Lastenheft",
+        heading: "Warum ein klarer erster Auftrag mehr zeigt als ein langes Lastenheft",
         paragraphs: [
           "An einer kleinen Route oder einem begrenzten Datenbestand zeigt sich schnell, welche Kriterien fehlen, wie dicht die Fälle liegen und welches Format intern tatsächlich weiterhilft.",
           "Erst nach diesem Test sollte ein Turnus, ein Mengengerüst oder eine größere Gebietsabdeckung vereinbart werden.",
@@ -727,7 +727,7 @@ export const knowledgeArticles: KnowledgeArticle[] = [
           "Aufgaben mit hoheitlichen Entscheidungen, Fachprüfungen, Sicherheitsfreigaben oder unklarer Verantwortung gehören nicht in ein einfaches Routinemodell.",
       },
       {
-        question: "Wie klein kann ein Pilot sein?",
+        question: "Wie klein kann ein erster Auftrag sein?",
         answer:
           "So klein, dass ein vollständiger Ablauf sichtbar wird: beispielsweise ein Ortsteil, eine Objektart oder vier Wochen Eingangsbearbeitung.",
       },
@@ -856,9 +856,9 @@ export const knowledgeArticles: KnowledgeArticle[] = [
         ],
       },
       {
-        heading: "Was vor einem Pilot feststehen muss",
+        heading: "Was vor der Beauftragung feststehen muss",
         paragraphs: [
-          "Ein sicherer Test beginnt mit wenigen Kategorien und einer kleinen Gruppe kommunaler Ansprechpartner.",
+          "Ein verlässlicher Prozess beginnt mit eindeutigen Kategorien und einer kleinen Gruppe kommunaler Ansprechpartner.",
         ],
         bullets: [
           "Kategorien und interne Zuständigkeiten",
@@ -884,7 +884,7 @@ export const knowledgeArticles: KnowledgeArticle[] = [
       {
         question: "Wie beginnt man ohne Systemzugriff?",
         answer:
-          "Ein Pilot kann mit einem sicheren Export oder einer abgegrenzten Übergabe starten. Der dauerhafte Zugriff wird erst nach Rollen- und Datenschutzprüfung eingerichtet.",
+          "Der Auftrag kann zunächst mit einem sicheren Export oder einer abgegrenzten Übergabe beginnen. Ein dauerhafter Zugriff wird erst nach Rollen- und Datenschutzprüfung eingerichtet.",
       },
     ],
   },
@@ -919,9 +919,9 @@ export const knowledgeArticles: KnowledgeArticle[] = [
         ],
       },
       {
-        heading: "Pilot nur mit realistischen Datenregeln",
+        heading: "Auftragsstart nur mit realistischen Datenregeln",
         paragraphs: [
-          "Auch ein Pilot benötigt sichere Übertragungswege und klare Löschregeln. Wo möglich, kann mit einer eng begrenzten Kategorie oder pseudonymisierten Beispieldaten begonnen werden.",
+          "Auch ein begrenzter Auftrag benötigt sichere Übertragungswege und klare Löschregeln. Wo möglich, kann mit einer eng begrenzten Kategorie oder pseudonymisierten Beispieldaten begonnen werden.",
         ],
       },
     ],
@@ -1046,7 +1046,7 @@ export const knowledgeArticles: KnowledgeArticle[] = [
       {
         question: "Kann direkt in ein Fachsystem geliefert werden?",
         answer:
-          "Wenn Schnittstelle, Berechtigung und Feldlogik geklärt sind. Für einen Pilot ist eine eindeutige Datei- und Tabellenstruktur oft schneller.",
+          "Wenn Schnittstelle, Berechtigung und Feldlogik geklärt sind. Für den Einstieg ist eine eindeutige Datei- und Tabellenstruktur oft schneller.",
       },
     ],
   },
@@ -1081,7 +1081,7 @@ export const knowledgeArticles: KnowledgeArticle[] = [
         ],
       },
       {
-        heading: "Pilotgebiet schützt vor teurer Übererfassung",
+        heading: "Ein sinnvoller erster Abschnitt schützt vor teurer Übererfassung",
         paragraphs: [
           "Nach einem Quartier ist sichtbar, welche Felder unklar sind, wie viele Objekte auftreten und ob die Übergabe intern funktioniert. Erst dann sollte das gesamte Gemeindegebiet folgen.",
         ],
@@ -1268,7 +1268,7 @@ export const knowledgeArticles: KnowledgeArticle[] = [
       {
         heading: "So bleibt der Katalog praxistauglich",
         paragraphs: [
-          "Im Pilot zeigt sich schnell, welche Kategorien zu breit oder zu ähnlich sind.",
+          "Bei der ersten Erfassungsroute zeigt sich schnell, welche Kategorien zu breit oder zu ähnlich sind.",
         ],
         bullets: [
           "pro Objekt nur Merkmale erfassen, die später genutzt werden",
@@ -1279,7 +1279,7 @@ export const knowledgeArticles: KnowledgeArticle[] = [
         ],
       },
       {
-        heading: "Erst Pilot, dann Preis pro Route",
+        heading: "Eine Referenzroute schafft eine belastbare Kalkulation",
         paragraphs: [
           "Entfernung, Punktdichte, Fotoumfang und sichere Zugänglichkeit bestimmen den Aufwand. Ein realer Probelauf liefert dafür bessere Werte als eine rein theoretische Kalkulation.",
         ],
@@ -1299,52 +1299,53 @@ export const knowledgeArticles: KnowledgeArticle[] = [
     ],
   },
   {
-    slug: "sichtkontrolle-oder-fachpruefung",
-    title: "Sichtdokumentation oder Fachprüfung? Die wichtige Leistungsgrenze",
-    eyebrow: "Leistungsgrenzen",
+    slug: "kommunale-leistung-richtig-beschreiben",
+    title: "Vier Angaben für eine kalkulierbare kommunale Dienstleistung",
+    eyebrow: "Beschaffung",
     summary:
-      "Wer sichtbare Zustände erhebt, darf nicht den Eindruck erwecken, technische Sicherheit, Rechtskonformität oder Funktionsfähigkeit geprüft zu haben.",
-    readingMinutes: 7,
+      "Gebiet, Menge, Turnus und gewünschtes Ergebnis: Mit diesen Angaben wird aus einem allgemeinen Bedarf eine belastbare Angebotsgrundlage.",
+    readingMinutes: 5,
     updated: "2026-09-01",
     serviceSlug: "kommunale-rundgaenge",
     sections: [
       {
-        heading: "Worte verändern die Verantwortung",
+        heading: "Mit dem Mengengerüst beginnen",
         paragraphs: [
-          "Begriffe wie Abnahme, Sicherheitsprüfung, Freigabe oder Verkehrssicherheitskontrolle beschreiben mehr als eine Fotodokumentation. Sie können Fachkunde, Prüfmaßstäbe und weitreichende Erwartungen auslösen.",
-          "Eine sauber begrenzte Routine benennt deshalb genau, was beobachtet und geliefert wird – und ebenso deutlich, was nicht Gegenstand des Auftrags ist.",
+          "Für eine erste Kalkulation braucht es selten ein fertiges Lastenheft. Entscheidend ist zunächst, wie groß das Gebiet ist, wie viele Standorte oder Vorgänge ungefähr anfallen und ob die Leistung einmalig oder wiederkehrend gebraucht wird.",
+          "Auch Zeitfenster, Zugänglichkeit und erwartbare Fahrwege beeinflussen den Aufwand. Eine grobe, ehrlich gekennzeichnete Schätzung ist hilfreicher als gar keine Mengenangabe.",
         ],
       },
       {
-        heading: "Merkmale einer reinen Sichtdokumentation",
+        heading: "Das gewünschte Ergebnis bestimmt den Auftrag",
         paragraphs: [
-          "Die Leistung bleibt bei Tatsachen, die ohne vertiefte fachliche Untersuchung nach einem vorgegebenen Schema aufgenommen werden können.",
+          "Ein Auftrag ist erst vollständig beschrieben, wenn die spätere Weiterverwendung klar ist. Eine Fotomappe, eine priorisierte Excel-Liste und ein strukturierter Systemimport verursachen unterschiedliche Arbeitsschritte.",
         ],
         bullets: [
-          "kommunal vorgegebene Punkte und Kriterien",
-          "Foto, Ort, Zeit und neutraler Status",
-          "keine Ursachenbehauptung",
-          "keine technische oder rechtliche Schlussfolgerung",
-          "Weitergabe an die zuständige Fachstelle",
+          "Pflichtfelder und Kategorien",
+          "Anzahl und Art der Fotos",
+          "Standort- und Zeitnachweis",
+          "Prioritäten und Sofortmeldungen",
+          "Dateiformat, Ablage oder Systemübergabe",
         ],
       },
       {
-        heading: "Die Leistungsgrenze gehört ins Angebot und in den Ablauf",
+        heading: "So werden Angebote vergleichbar",
         paragraphs: [
-          "Ein Haftungsausschluss im Kleingedruckten genügt nicht, wenn der tatsächliche Prozess zur fachlichen Entscheidung drängt. Mitarbeitende brauchen klare Eskalationsregeln und dürfen Zweifelsfälle bewusst offenlassen.",
+          "Vergleichbare Angebote benennen nicht nur einen Gesamtpreis. Sie machen auch enthaltene Mengen, Anfahrten, Bearbeitungstiefe, Reaktionszeiten, Übergabeformate und den Umgang mit Zusatzaufwand sichtbar.",
+          "Wer diese Punkte vor der Anfrage vorbereitet, reduziert Rückfragen und erhält schneller eine belastbare Entscheidungsgrundlage.",
         ],
       },
     ],
     faq: [
       {
-        question: "Kann eine Sichtdokumentation trotzdem dringende Hinweise melden?",
+        question: "Braucht die Kommune vor der Anfrage eine fertige Leistungsbeschreibung?",
         answer:
-          "Ja, wenn dafür ein neutraler, vorab definierter Meldeweg besteht. Die Meldung ist keine fachliche Freigabe oder abschließende Gefahrenbewertung.",
+          "Nein. Für die erste Einordnung genügen Aufgabe, Einsatzgebiet, ungefähre Menge und gewünschter Zeitraum. Offene Details können anschließend gemeinsam geklärt werden.",
       },
       {
-        question: "Ersetzt eine ausführliche Checkliste die Fachkunde?",
+        question: "Warum wird nicht überall sofort ein Pauschalpreis genannt?",
         answer:
-          "Nein. Eine Checkliste strukturiert Beobachtungen, macht aus einer nicht fachkundigen Aufnahme aber keine qualifizierte Fachprüfung.",
+          "Weil Fahrwege, Punktdichte, Bearbeitungstiefe und Übergabeformat den Aufwand stark verändern. Ein transparenter Preis braucht deshalb ein zumindest grobes Mengengerüst.",
       },
     ],
   },

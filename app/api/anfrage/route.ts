@@ -9,6 +9,8 @@ type InquiryPayload = {
   phone?: unknown;
   service?: unknown;
   message?: unknown;
+  scope?: unknown;
+  timing?: unknown;
   website?: unknown;
   consent?: unknown;
 };
@@ -69,6 +71,8 @@ export async function POST(request: Request) {
   const phone = clean(payload.phone, 60);
   const serviceSlug = clean(payload.service, 120);
   const message = clean(payload.message, 4000);
+  const scope = clean(payload.scope, 180);
+  const timing = clean(payload.timing, 120);
   const consent = clean(payload.consent, 10);
 
   if (!organization || !municipality || !name || message.length < 20 || consent !== "yes") {
@@ -91,13 +95,15 @@ export async function POST(request: Request) {
   const service = getService(serviceSlug);
   const serviceLabel = service?.shortTitle || "Andere / noch offene Routine";
   const html = `
-    <h1>Neue Pilotanfrage</h1>
+    <h1>Neue Leistungsanfrage</h1>
     <p><strong>Kommune / Organisation:</strong> ${escapeHtml(organization)}</p>
     <p><strong>Ort / Einsatzgebiet:</strong> ${escapeHtml(municipality)}</p>
     <p><strong>Ansprechperson:</strong> ${escapeHtml(name)}</p>
     <p><strong>E-Mail:</strong> ${escapeHtml(email)}</p>
     <p><strong>Telefon:</strong> ${escapeHtml(phone || "–")}</p>
     <p><strong>Leistung:</strong> ${escapeHtml(serviceLabel)}</p>
+    <p><strong>Ungefährer Umfang:</strong> ${escapeHtml(scope || "–")}</p>
+    <p><strong>Gewünschter Zeitraum:</strong> ${escapeHtml(timing || "–")}</p>
     <h2>Beschreibung</h2>
     <p>${escapeHtml(message).replace(/\n/g, "<br>")}</p>
   `;
@@ -105,7 +111,7 @@ export async function POST(request: Request) {
   const response = await fetch("https://api.resend.com/emails", {
     method: "POST",
     headers: { Authorization: `Bearer ${apiKey}`, "Content-Type": "application/json" },
-    body: JSON.stringify({ from, to: [to], reply_to: email, subject: `Pilotanfrage: ${organization} – ${serviceLabel}`, html }),
+    body: JSON.stringify({ from, to: [to], reply_to: email, subject: `Leistungsanfrage: ${organization} – ${serviceLabel}`, html }),
   });
 
   if (!response.ok) {

@@ -9,7 +9,7 @@ import "./globals.css";
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: `${siteConfig.name} | Kommunale Routinedienstleistungen`,
+    default: `${siteConfig.name} | Kommunale Dienstleistungen`,
     template: `%s | ${siteConfig.name}`,
   },
   description: siteConfig.description,
@@ -44,7 +44,7 @@ export const metadata: Metadata = {
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
-  themeColor: "#123f35",
+  themeColor: "#071d33",
   colorScheme: "light",
 };
 

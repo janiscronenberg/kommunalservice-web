@@ -4,7 +4,7 @@ import { ArrowIcon } from "./icons";
 
 const nav = [
   { href: "/leistungen", label: "Leistungen" },
-  { href: "/arbeitsweise", label: "Arbeitsweise" },
+  { href: "/arbeitsweise", label: "So arbeiten wir" },
   { href: "/kommunalwissen", label: "Kommunalwissen" },
   { href: "/einsatzgebiet", label: "Einsatzgebiet" },
 ];
@@ -17,8 +17,8 @@ export function SiteHeader() {
       </a>
       <div className="utility-bar">
         <div className="container utility-inner">
-          <span>Für Städte, Gemeinden & kommunale Betriebe</span>
-          <span className="utility-detail">Erfassung · Dokumentation · Routineentlastung</span>
+          <span>Für Städte, Gemeinden und kommunale Betriebe</span>
+          <span className="utility-detail">Außendienst · Dokumentation · Backoffice</span>
         </div>
       </div>
       <header className="site-header">
@@ -44,7 +44,7 @@ export function SiteHeader() {
           </nav>
 
           <Link className="button button-small header-cta" href="/anfrage">
-            Pilot anfragen <ArrowIcon />
+            Leistung anfragen <ArrowIcon />
           </Link>
 
           <details className="mobile-menu">
@@ -59,9 +59,8 @@ export function SiteHeader() {
                   {item.label}
                 </Link>
               ))}
-              <Link href="/leistungsgrenzen">Leistungsgrenzen</Link>
               <Link className="button" href="/anfrage">
-                Pilot anfragen <ArrowIcon />
+                Leistung anfragen <ArrowIcon />
               </Link>
             </nav>
           </details>

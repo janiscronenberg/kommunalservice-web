@@ -10,7 +10,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ["/kommunalwissen", 0.9, "weekly"],
     ["/arbeitsweise", 0.7, "monthly"],
     ["/einsatzgebiet", 0.7, "monthly"],
-    ["/leistungsgrenzen", 0.8, "monthly"],
     ["/anfrage", 0.8, "monthly"],
     ["/impressum", 0.2, "yearly"],
     ["/datenschutz", 0.2, "yearly"],

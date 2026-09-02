@@ -7,7 +7,7 @@ Website und organische Lead-Engine für klar abgegrenzte kommunale Routine-, Erf
 - responsive Startseite und vollständiger Leistungskatalog
 - zehn ausführliche Leistungsseiten
 - dreizehn Kommunalwissen-Beiträge
-- Seiten zu Arbeitsweise, Einsatzgebiet und Leistungsgrenzen
+- Seiten zu Arbeitsweise und Einsatzgebiet
 - Anfrageformular mit Validierung, Honeypot, Herkunftsprüfung und Mengenbegrenzung
 - vorbereiteter E-Mail-Versand über Resend
 - Sitemap, Robots, RSS, Manifest, OpenGraph-Bild und strukturierte Daten

@@ -5,7 +5,7 @@ import { knowledgeArticles } from "../../lib/content";
 export const metadata: Metadata = {
   title: "Kommunalwissen",
   description:
-    "Praxiswissen zu kommunalen Routinen, Außendienstdokumentation, Backoffice, Leistungsgrenzen und Pilotprojekten.",
+    "Praxiswissen zu kommunalen Routinen, Außendienstdokumentation, Backoffice und Bestandsdaten.",
   alternates: { canonical: "/kommunalwissen" },
 };
 
@@ -16,8 +16,8 @@ export default function KnowledgePage() {
     <main id="main-content">
       <section className="page-hero knowledge-hero">
         <div className="container page-hero-grid">
-          <div><span className="eyebrow">Kommunalwissen</span><h1>Wissen, bevor aus einer Routine<br /><em>ein Projekt wird.</em></h1></div>
-          <div className="page-hero-aside"><p>Praktische Orientierung zu wiederkehrenden Aufgaben, sauberer Dokumentation und der entscheidenden Grenze zwischen Erfassung und Fachentscheidung.</p></div>
+          <div><span className="eyebrow">Kommunalwissen</span><h1>Praxiswissen für<br /><em>kommunale Routinen.</em></h1></div>
+          <div className="page-hero-aside"><p>Konkrete Hinweise, Checklisten und Entscheidungshilfen für wiederkehrende Außendienst-, Dokumentations- und Backoffice-Aufgaben.</p></div>
         </div>
         <div className="container topic-row" aria-label="Themen">
           {topics.map((topic) => <span key={topic}>{topic}</span>)}

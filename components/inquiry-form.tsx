@@ -70,9 +70,20 @@ export function InquiryForm({ defaultService = "" }: { defaultService?: string }
       </div>
 
       <label className="form-full">
-        <span>Welche Routine möchten Sie entlasten? *</span>
-        <textarea name="message" required minLength={20} maxLength={4000} rows={7} placeholder="Kurz genügen: heutiger Ablauf, Gebiet oder Menge und gewünschtes Ergebnis." />
+        <span>Aufgabe und gewünschtes Ergebnis *</span>
+        <textarea name="message" required minLength={20} maxLength={4000} rows={6} placeholder="Was soll an welchen Standorten oder Vorgängen erledigt und in welcher Form übergeben werden?" />
       </label>
+
+      <div className="form-grid">
+        <label>
+          <span>Ungefährer Umfang</span>
+          <input name="scope" maxLength={180} placeholder="z. B. 45 Standorte oder 200 Meldungen/Monat" />
+        </label>
+        <label>
+          <span>Gewünschter Zeitraum</span>
+          <input name="timing" maxLength={120} placeholder="z. B. ab Oktober oder vierteljährlich" />
+        </label>
+      </div>
 
       <label className="honeypot" aria-hidden="true">
         <span>Website</span>
@@ -86,7 +97,7 @@ export function InquiryForm({ defaultService = "" }: { defaultService?: string }
 
       <div className="form-submit-row">
         <button className="button" type="submit" disabled={state.type === "sending"}>
-          {state.type === "sending" ? "Wird gesendet …" : "Pilot unverbindlich anfragen"} <ArrowIcon />
+          {state.type === "sending" ? "Wird gesendet …" : "Anfrage unverbindlich senden"} <ArrowIcon />
         </button>
         <span>Pflichtfelder sind mit * gekennzeichnet.</span>
       </div>
