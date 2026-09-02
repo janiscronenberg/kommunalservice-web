@@ -4,17 +4,17 @@ import { ArrowIcon, CheckIcon } from "../../components/icons";
 
 export const metadata: Metadata = {
   title: "Arbeitsweise",
-  description: "So wird aus einer kommunalen Routine ein klar abgegrenzter, messbarer Pilot und ein verlässlicher Leistungsprozess.",
+  description: "So werden kommunale Außendienst-, Dokumentations- und Backoffice-Aufgaben verlässlich beauftragt, bearbeitet und übergeben.",
   alternates: { canonical: "/arbeitsweise" },
 };
 
 const phases = [
-  { n: "01", title: "Routine verstehen", text: "Nicht das Wunschprodukt, sondern der heutige Ablauf ist unser Ausgangspunkt: Wer macht was, wann, womit und für welche interne Weiterverwendung?", result: "Ergebnis: Prozessskizze und klare Problemdefinition" },
-  { n: "02", title: "Grenze festlegen", text: "Wir trennen beobachtbare oder organisatorische Schritte von fachlicher, technischer und hoheitlicher Entscheidung.", result: "Ergebnis: Leistungs- und Ausschlusskatalog" },
-  { n: "03", title: "Pilot bemessen", text: "Ein Ortsteil, eine Route, eine Objektart oder ein befristeter Backoffice-Zeitraum wird vollständig durchgespielt.", result: "Ergebnis: transparentes Pilotangebot" },
-  { n: "04", title: "Daten abstimmen", text: "Pflichtfelder, Fotos, Statuswerte, Rückfragen und Sofortmeldungen werden so definiert, dass die Fachstelle direkt weiterarbeiten kann.", result: "Ergebnis: Kriterien- und Übergabematrix" },
-  { n: "05", title: "Real testen", text: "Der Pilot läuft unter echten Bedingungen. Ausnahmen und unklare Fälle werden dokumentiert, nicht improvisiert entschieden.", result: "Ergebnis: vollständige Pilotauswertung" },
-  { n: "06", title: "Bewusst skalieren", text: "Nur bei nachweisbarer Entlastung folgen weitere Gebiete, Module oder ein fester Turnus.", result: "Ergebnis: belastbarer Routineauftrag" },
+  { n: "01", title: "Bedarf aufnehmen", text: "Sie nennen Aufgabe, Gebiet oder Datenbestand, ungefähre Menge, gewünschten Zeitraum und vorhandene Unterlagen.", result: "Ergebnis: vollständige Kalkulationsgrundlage" },
+  { n: "02", title: "Leistung beschreiben", text: "Wir legen fest, welche Arbeitsschritte enthalten sind, welche Angaben erhoben werden und welche Termine gelten.", result: "Ergebnis: eindeutiger Leistungsumfang" },
+  { n: "03", title: "Übergabe definieren", text: "Pflichtfelder, Fotos, Statuswerte, Dateiformat, Rückfragen und Sofortmeldungen werden verbindlich abgestimmt.", result: "Ergebnis: direkt nutzbares Übergabeformat" },
+  { n: "04", title: "Angebot erstellen", text: "Sie erhalten ein nachvollziehbares Angebot auf Grundlage von Gebiet, Menge, Turnus und gewünschter Bearbeitungstiefe.", result: "Ergebnis: klare Kosten- und Terminbasis" },
+  { n: "05", title: "Auftrag durchführen", text: "Die vereinbarte Leistung wird termingerecht ausgeführt. Ausnahmen und Rückfragen bleiben nachvollziehbar dokumentiert.", result: "Ergebnis: vollständig bearbeiteter Auftrag" },
+  { n: "06", title: "Ergebnisse übergeben", text: "Ihre Ansprechperson erhält die sortierte Dokumentation und – bei wiederkehrenden Aufgaben – den vereinbarten Folgetermin.", result: "Ergebnis: verlässlicher Serviceprozess" },
 ];
 
 export default function WorkPage() {
@@ -22,8 +22,8 @@ export default function WorkPage() {
     <main id="main-content">
       <section className="page-hero work-hero">
         <div className="container page-hero-grid">
-          <div><span className="eyebrow">Arbeitsweise</span><h1>Erst verstehen.<br />Dann vereinfachen.<br /><em>Danach erst skalieren.</em></h1></div>
-          <div className="page-hero-aside"><p>Ein sauberer Routineauftrag braucht weniger Folien und mehr Klarheit: Was wird beobachtet, was wird geliefert, wer entscheidet – und was passiert bei Ausnahmen?</p></div>
+          <div><span className="eyebrow">Arbeitsweise</span><h1>Klar beauftragt.<br />Verlässlich erledigt.<br /><em>Nutzbar übergeben.</em></h1></div>
+          <div className="page-hero-aside"><p>Ein guter Dienstleistungsauftrag beantwortet vor Beginn vier Fragen: Was wird gemacht, bis wann, in welchem Format und für welchen Preis?</p></div>
         </div>
       </section>
 
@@ -38,18 +38,18 @@ export default function WorkPage() {
         </div>
       </section>
 
-      <section className="section section-green">
+      <section className="section section-blue">
         <div className="container principle-grid">
-          <div><span className="eyebrow eyebrow-light">Drei Arbeitsprinzipien</span><h2>Pragmatisch heißt nicht<br /><em>unkontrolliert.</em></h2></div>
+          <div><span className="eyebrow eyebrow-light">Drei Arbeitsprinzipien</span><h2>Verlässlichkeit entsteht<br /><em>durch klare Abläufe.</em></h2></div>
           <div className="principle-cards">
-            <article><span>01</span><h3>Ausnahmen bleiben sichtbar</h3><p>Unklare Fälle werden nicht passend gemacht, sondern getrennt und mit Rückfrage übergeben.</p></article>
-            <article><span>02</span><h3>Daten gehören der Kommune</h3><p>Formate, Zugriffe, Rückgabe und Löschung werden vor der Bearbeitung vereinbart.</p></article>
-            <article><span>03</span><h3>Kein Wachstum um jeden Preis</h3><p>Ein Modul wird nur erweitert, wenn der reale Pilot die versprochene Entlastung zeigt.</p></article>
+            <article><span>01</span><h3>Einheitliche Bearbeitung</h3><p>Alle Standorte und Vorgänge werden nach denselben vereinbarten Merkmalen bearbeitet.</p></article>
+            <article><span>02</span><h3>Nachvollziehbare Ergebnisse</h3><p>Fotos, Zeiten, Statusangaben und Änderungen bleiben eindeutig einem Vorgang zugeordnet.</p></article>
+            <article><span>03</span><h3>Fester Meldeweg</h3><p>Für Rückfragen, Ausnahmen und dringende Auffälligkeiten stehen die Wege vor Beginn fest.</p></article>
           </div>
         </div>
       </section>
 
-      <section className="section closing-section"><div className="container closing-card"><div><span className="eyebrow">Pilot starten</span><h2>Welche Routine sollen wir gemeinsam in sechs klare Schritte bringen?</h2><p>Eine kurze Prozessbeschreibung genügt für die erste Einordnung.</p></div><div className="closing-actions"><Link className="button" href="/anfrage">Aufgabe beschreiben <ArrowIcon /></Link></div></div></section>
+      <section className="section closing-section"><div className="container closing-card"><div><span className="eyebrow">Angebotsgrundlage schaffen</span><h2>Welche Aufgabe dürfen wir für Ihre Kommune kalkulieren?</h2><p>Einsatzort, ungefährer Umfang, gewünschter Zeitpunkt und Ergebnisformat genügen für die erste Einordnung.</p></div><div className="closing-actions"><Link className="button" href="/anfrage">Leistung anfragen <ArrowIcon /></Link></div></div></section>
     </main>
   );
 }

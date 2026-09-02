@@ -101,10 +101,10 @@ export default async function KnowledgeDetailPage({ params }: PageProps) {
         </div>
       </article>
 
-      <section className="section section-sand compact-cta-section">
+      <section className="section section-soft compact-cta-section">
         <div className="container compact-cta">
-          <div><span className="eyebrow">Von der Information zum Pilot</span><h2>{service ? service.shortTitle : "Kommunale Routine"} praktisch testen.</h2></div>
-          <div><p>Ein abgegrenzter Realtest zeigt mehr als ein theoretischer Prozessentwurf.</p><Link className="button" href={service ? `/anfrage?leistung=${service.slug}` : "/anfrage"}>Pilot beschreiben <ArrowIcon /></Link></div>
+          <div><span className="eyebrow">Passende Dienstleistung</span><h2>{service ? service.shortTitle : "Kommunale Routine"} konkret anfragen.</h2></div>
+          <div><p>Nennen Sie uns Einsatzort, ungefährer Umfang und gewünschten Zeitraum. Wir melden uns mit einer konkreten Einschätzung.</p><Link className="button" href={service ? `/anfrage?leistung=${service.slug}` : "/anfrage"}>Leistung anfragen <ArrowIcon /></Link></div>
         </div>
       </section>
     </main>

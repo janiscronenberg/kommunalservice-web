@@ -7,11 +7,11 @@ export function SiteFooter() {
     <footer className="site-footer">
       <div className="container footer-cta">
         <div>
-          <span className="eyebrow eyebrow-light">Einfach mit einer Routine anfangen</span>
-          <h2>Welche kleine Aufgabe kostet Ihr Team gerade zu viel Zeit?</h2>
+          <span className="eyebrow eyebrow-light">Bedarf besprechen</span>
+          <h2>Welche Aufgabe sollen wir zuverlässig für Sie erledigen?</h2>
         </div>
         <Link className="button button-light" href="/anfrage">
-          Pilot beschreiben <ArrowIcon />
+          Leistung anfragen <ArrowIcon />
         </Link>
       </div>
 
@@ -29,9 +29,6 @@ export function SiteFooter() {
             </span>
           </Link>
           <p>{siteConfig.description}</p>
-          <p className="footer-boundary">
-            Keine hoheitlichen Entscheidungen, keine technischen Abnahmen und keine Sachverständigenprüfungen.
-          </p>
         </div>
 
         <div>
@@ -50,7 +47,6 @@ export function SiteFooter() {
           <ul>
             <li><Link href="/arbeitsweise">Arbeitsweise</Link></li>
             <li><Link href="/einsatzgebiet">Einsatzgebiet</Link></li>
-            <li><Link href="/leistungsgrenzen">Leistungsgrenzen</Link></li>
             <li><Link href="/kommunalwissen">Kommunalwissen</Link></li>
             <li><Link href="/anfrage">Anfrage</Link></li>
           </ul>
@@ -68,7 +64,7 @@ export function SiteFooter() {
 
       <div className="container footer-bottom">
         <span>© {new Date().getFullYear()} {siteConfig.name}</span>
-        <span>Entwickelt für klare kommunale Abläufe.</span>
+        <span>Kommunale Aufgaben. Verlässlich erledigt.</span>
       </div>
     </footer>
   );

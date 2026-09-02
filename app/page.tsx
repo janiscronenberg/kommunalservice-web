@@ -8,17 +8,23 @@ import { knowledgeArticles, services, siteConfig } from "../lib/content";
 import { absoluteUrl } from "../lib/site";
 
 export const metadata: Metadata = {
-  title: "Kommunale Routinedienstleistungen",
+  title: "Kommunale Dienstleistungen, die zuverlässig erledigt werden",
   description:
-    "Erfassung, Dokumentation und Backoffice für Städte und Gemeinden: klar abgegrenzte Routinen, Pilotprojekte und verwertbare Ergebnisse.",
+    "KommunalRoutine übernimmt wiederkehrende Außendienst-, Dokumentations- und Backoffice-Aufgaben für Städte, Gemeinden und kommunale Betriebe.",
   alternates: { canonical: "/" },
 };
 
+const reasons = [
+  { icon: "route" as const, title: "Kapazität, wenn sie gebraucht wird", text: "Für saisonale Spitzen, verteilte Kleinstaufgaben oder wiederkehrende Routen, die intern zu viel Zeit binden." },
+  { icon: "camera" as const, title: "Einheitlich dokumentiert", text: "Jeder Vorgang folgt denselben Feldern, Fotovorgaben und Statuswerten. Damit Ergebnisse direkt weiterverarbeitet werden können." },
+  { icon: "database" as const, title: "Passend zu Ihren Abläufen", text: "Übergabe als PDF, Excel/CSV oder in einer abgestimmten Struktur – ohne unnötigen Systemwechsel." },
+  { icon: "inbox" as const, title: "Ein Auftrag, ein Ansprechpartner", text: "Mehrere kleine Aufgaben lassen sich bündeln. Das reduziert Abstimmung, Einzelwege und verstreute Dokumentation." },
+];
+
 const workflow = [
-  { number: "01", title: "Aufgabe abgrenzen", text: "Sie nennen die Routine, das Gebiet und das Ergebnis, das Ihrer Fachstelle wirklich weiterhilft." },
-  { number: "02", title: "Kriterien festlegen", text: "Wir übersetzen den Ablauf in beobachtbare Merkmale, klare Meldewege und ein nutzbares Datenformat." },
-  { number: "03", title: "Pilot durchführen", text: "Eine kleine Route oder ein begrenzter Backoffice-Zeitraum zeigt den realen Aufwand und die Datenqualität." },
-  { number: "04", title: "Routine daraus machen", text: "Nur wenn der Pilot entlastet, entsteht ein wiederkehrender Turnus mit transparentem Leistungsumfang." },
+  { number: "01", title: "Sie nennen Aufgabe und Umfang", text: "Gebiet, Anzahl der Standorte oder Vorgänge, gewünschter Termin und vorhandene Unterlagen genügen für den Einstieg." },
+  { number: "02", title: "Sie erhalten ein klares Angebot", text: "Mit beschriebenem Leistungsumfang, Übergabeformat, Turnus, Zuständigkeiten und nachvollziehbarer Kalkulation." },
+  { number: "03", title: "Wir erledigen und übergeben", text: "Zum vereinbarten Termin erhalten Sie eine vollständige, sortierte und unmittelbar nutzbare Ergebnisdokumentation." },
 ];
 
 export default function HomePage() {
@@ -36,95 +42,78 @@ export default function HomePage() {
       <JsonLd data={webSiteSchema} />
 
       <section className="hero-home">
-        <div className="hero-grid-bg" aria-hidden="true" />
         <div className="container hero-layout">
           <div className="hero-copy">
-            <span className="eyebrow">Externe Routineentlastung für Kommunen</span>
-            <h1>Routine raus.<br /><em>Verwaltung frei.</em></h1>
+            <span className="eyebrow">Dienstleistungen für Städte und Gemeinden</span>
+            <h1>Mehr erledigen.<br /><em>Ohne mehr Personal.</em></h1>
             <p className="hero-lead">
-              Wir übernehmen klar abgegrenzte Erfassungs-, Dokumentations- und Backoffice-Aufgaben für Städte und Gemeinden. Nach Ihrem Kriterienkatalog. Ohne Eingriff in fachliche oder hoheitliche Entscheidungen.
+              KommunalRoutine übernimmt wiederkehrende Außendienst-, Dokumentations- und Backoffice-Aufgaben – verbindlich terminiert, einheitlich bearbeitet und so übergeben, dass Ihre Verwaltung direkt weiterarbeiten kann.
             </p>
             <div className="hero-actions">
-              <Link className="button" href="/anfrage">Pilotprojekt anfragen <ArrowIcon /></Link>
-              <Link className="button button-ghost" href="/leistungen">Leistungen entdecken</Link>
+              <Link className="button" href="/anfrage">Leistung anfragen <ArrowIcon /></Link>
+              <Link className="button button-ghost" href="#leistungen">Leistungen ansehen</Link>
             </div>
             <ul className="hero-proof" aria-label="Leistungsmerkmale">
-              <li><CheckIcon /> Foto & Standort</li>
-              <li><CheckIcon /> Verwertbare Daten</li>
-              <li><CheckIcon /> Klare Grenze</li>
+              <li><CheckIcon /> Einmalig oder im festen Turnus</li>
+              <li><CheckIcon /> Klarer Leistungsumfang</li>
+              <li><CheckIcon /> Nutzbare Ergebnisübergabe</li>
             </ul>
           </div>
 
-          <div className="route-board" aria-label="Beispiel einer dokumentierten kommunalen Route">
-            <div className="route-board-head">
-              <div><span className="route-kicker">Gemeinderunde · Süd</span><strong>12 Punkte dokumentiert</strong></div>
-              <span className="live-pill"><i /> abgeschlossen</span>
+          <div className="result-preview" aria-label="Beispiel einer kommunalen Ergebnisübergabe">
+            <div className="result-preview__top">
+              <div><span>Beispiel · Ergebnisübergabe</span><strong>Dokumentationsrunde Nord</strong></div>
+              <span className="result-status"><i /> vollständig</span>
             </div>
-            <div className="route-map" aria-hidden="true">
-              <svg viewBox="0 0 600 260" preserveAspectRatio="none">
-                <path className="map-street" d="M-20 210C80 175 80 95 180 110S320 220 410 168 500 48 630 66" />
-                <path className="map-street map-street-thin" d="M100-20c30 75 10 132-35 188M310-20c-15 70 0 125 70 190M520 280c-45-80-30-140 0-205" />
-                <path className="map-route" d="M42 198c78-26 72-95 151-82s117 94 197 54 90-92 166-102" />
-              </svg>
-              <span className="map-point point-one"><b>01</b></span>
-              <span className="map-point point-two"><b>02</b></span>
-              <span className="map-point point-three point-alert"><b>03</b></span>
-              <span className="map-point point-four"><b>04</b></span>
-              <div className="map-note">
-                <span className="icon-tile icon-tile-small"><Icon name="leaf" size={18} /></span>
-                <div><small>Punkt 03</small><strong>Überwuchs sichtbar</strong></div>
-                <span className="status-dot">melden</span>
-              </div>
+            <div className="result-preview__stats">
+              <div><strong>37</strong><span>Standorte</span></div>
+              <div><strong>6</strong><span>Auffälligkeiten</span></div>
+              <div><strong>4</strong><span>priorisiert</span></div>
             </div>
-            <div className="route-summary">
-              <div><span>9</span><small>ohne Befund</small></div>
-              <div><span>2</span><small>dokumentiert</small></div>
-              <div className="summary-alert"><span>1</span><small>Auffälligkeit</small></div>
+            <div className="result-preview__record">
+              <div className="record-photo"><Icon name="camera" size={28} /></div>
+              <div className="record-copy"><span>Standort 18 · 09:42 Uhr</span><strong>Straßeneinlauf teilweise bedeckt</strong><small>Foto · GPS · Status · Notiz</small></div>
+              <span className="record-priority">Priorität 2</span>
+            </div>
+            <div className="result-preview__files">
+              <span><Icon name="database" size={18} /> Ergebnisliste.xlsx</span>
+              <span><Icon name="camera" size={18} /> Fotodokumentation.pdf</span>
             </div>
           </div>
         </div>
       </section>
 
-      <section className="trust-strip" aria-label="Grundsätze der Zusammenarbeit">
+      <section className="trust-strip" aria-label="Einsatz und Übergabe">
         <div className="container trust-grid">
-          <div><span>01</span><p><strong>Kein neues Großprojekt</strong><br />Klein starten, real prüfen.</p></div>
-          <div><span>02</span><p><strong>Keine Blackbox</strong><br />Kriterien und Daten sind sichtbar.</p></div>
-          <div><span>03</span><p><strong>Keine Kompetenzverschiebung</strong><br />Ihre Fachstelle entscheidet.</p></div>
+          <div><span>VOR ORT</span><p><strong>Region Stuttgart & Baden-Württemberg</strong><br />weitere Gebiete nach Vereinbarung</p></div>
+          <div><span>DIGITAL</span><p><strong>Backoffice deutschlandweit</strong><br />in vorhandenen Systemen und Formaten</p></div>
+          <div><span>ERGEBNIS</span><p><strong>PDF, Excel/CSV oder Systemübergabe</strong><br />vor Auftrag eindeutig abgestimmt</p></div>
         </div>
       </section>
 
       <section className="section" id="leistungen">
         <div className="container">
           <div className="section-heading split-heading">
-            <div><span className="eyebrow">Leistungsmodule</span><h2>Kleine Aufgaben.<br /><em>Sauber erledigt.</em></h2></div>
-            <div><p>Jedes Modul ist so zugeschnitten, dass die Kommune fachliche und hoheitliche Entscheidungen behält – und trotzdem spürbar operative Zeit gewinnt.</p><Link className="text-link" href="/leistungen">Alle 10 Leistungen <ArrowIcon /></Link></div>
+            <div><span className="eyebrow">Leistungen</span><h2>Konkrete Aufgaben.<br /><em>Verlässlich ausgeführt.</em></h2></div>
+            <div><p>Vom einzelnen Erfassungstermin bis zum regelmäßigen Service: Sie bestimmen Gebiet, Umfang, Turnus und gewünschtes Ergebnis.</p><Link className="text-link" href="/leistungen">Alle Leistungen ansehen <ArrowIcon /></Link></div>
           </div>
           <div className="service-grid">
             {services.slice(0, 6).map((service, index) => <ServiceCard service={service} index={index} key={service.slug} />)}
           </div>
-          <div className="section-bottom-link">
-            <Link className="button button-outline" href="/leistungen">Vollständigen Leistungskatalog ansehen <ArrowIcon /></Link>
-          </div>
+          <div className="section-bottom-link"><Link className="button button-outline" href="/leistungen">Vollständigen Leistungskatalog öffnen <ArrowIcon /></Link></div>
         </div>
       </section>
 
-      <section className="section section-green">
-        <div className="container boundary-layout">
-          <div className="boundary-copy">
-            <span className="eyebrow eyebrow-light">Die wichtigste Leistungszusage</span>
-            <h2>Wir dokumentieren.<br /><em>Ihre Kommune entscheidet.</em></h2>
-            <p>Klare Grenzen machen externe Routinearbeit verlässlich. Deshalb schreiben wir nicht nur auf, was wir tun – sondern ebenso deutlich, was bei Ihren Fachstellen und Fachpartnern bleibt.</p>
-            <Link className="button button-light" href="/leistungsgrenzen">Leistungsgrenzen ansehen <ArrowIcon /></Link>
+      <section className="section section-blue">
+        <div className="container reasons-layout">
+          <div className="reasons-intro">
+            <span className="eyebrow eyebrow-light">Der Unterschied im Alltag</span>
+            <h2>Die Aufgabe ist erst erledigt, wenn das Ergebnis intern nutzbar ist.</h2>
+            <p>Deshalb beginnt jeder Auftrag mit der späteren Weiterverwendung: Welche Angaben braucht die Fachabteilung, wie werden Auffälligkeiten sortiert und wann muss sofort gemeldet werden?</p>
+            <Link className="button button-light" href="/arbeitsweise">So arbeiten wir <ArrowIcon /></Link>
           </div>
-          <div className="boundary-panel">
-            {[
-              ["01", "Keine hoheitlichen Entscheidungen", "Keine Verfügungen, Bußgelder oder behördlichen Bewertungen."],
-              ["02", "Keine Sachverständigenprüfung", "Sichtbare Merkmale nach Ihrem bestätigten Kriterienkatalog."],
-              ["03", "Keine technische Abnahme", "Fachliche Freigaben bleiben bei qualifizierten Verantwortlichen."],
-              ["04", "Keine Bewachung", "Dokumentation und organisatorische Unterstützung, kein Sicherheitsdienst."],
-            ].map(([number, title, text]) => (
-              <article className="boundary-row" key={number}><span>{number}</span><div><h3>{title}</h3><p>{text}</p></div></article>
-            ))}
+          <div className="reasons-grid">
+            {reasons.map((reason) => <article key={reason.title}><span className="reason-icon"><Icon name={reason.icon} /></span><h3>{reason.title}</h3><p>{reason.text}</p></article>)}
           </div>
         </div>
       </section>
@@ -132,22 +121,34 @@ export default function HomePage() {
       <section className="section process-section">
         <div className="container">
           <div className="section-heading centered-heading">
-            <span className="eyebrow">Pilot statt Großprojekt</span>
-            <h2>In vier Schritten zur<br /><em>funktionierenden Routine.</em></h2>
-            <p>Keine langwierige Systemeinführung. Erst ein begrenzter realer Ablauf, dann eine belastbare Entscheidung.</p>
+            <span className="eyebrow">Von der Anfrage zur Durchführung</span>
+            <h2>Einfach beauftragbar.<br /><em>Sauber nachvollziehbar.</em></h2>
+            <p>Keine Produktvorführung und kein Beratungsprojekt. Entscheidend sind ein klarer Auftrag, ein brauchbares Ergebnis und verlässliche Termine.</p>
           </div>
-          <div className="process-grid">
+          <div className="process-grid process-grid-three">
             {workflow.map((step) => <article className="process-card" key={step.number}><span>{step.number}</span><h3>{step.title}</h3><p>{step.text}</p></article>)}
           </div>
-          <div className="process-note"><span>Ergebnis</span><p>Ein Auftrag, den beide Seiten verstehen – mit klarer Leistung, klarer Übergabe und klarer Verantwortung.</p></div>
+          <div className="process-cta"><p><strong>Für eine erste Einschätzung genügen:</strong> Aufgabe, Einsatzort, ungefährer Umfang und gewünschter Zeitpunkt.</p><Link className="button" href="/anfrage">Aufgabe beschreiben <ArrowIcon /></Link></div>
         </div>
       </section>
 
-      <section className="section section-sand">
+      <section className="section section-soft">
+        <div className="container use-case-layout">
+          <div><span className="eyebrow">Wann externe Unterstützung sinnvoll ist</span><h2>Wenn wichtige Routinen regelmäßig gegen dringendere Aufgaben verlieren.</h2></div>
+          <div className="use-case-list">
+            <article><span>01</span><div><h3>Saisonale Arbeitsspitzen</h3><p>Überwuchs, Starkregen, Aushänge oder Bestandsaufnahmen fallen in kurzer Zeit gebündelt an.</p></div></article>
+            <article><span>02</span><div><h3>Viele kleine, verteilte Aufgaben</h3><p>Einzelne Vorgänge sind zu klein für eigene Ressourcen, ergeben zusammen aber einen planbaren Auftrag.</p></div></article>
+            <article><span>03</span><div><h3>Rückstände und Vertretungsbedarf</h3><p>Ein klar abgrenzbarer Bestand soll strukturiert abgearbeitet werden, ohne dauerhafte Personalbindung.</p></div></article>
+            <article><span>04</span><div><h3>Einheitliche Datengrundlage</h3><p>Standorte, Fotos und Statusangaben sollen erstmals oder erneut in einer verwertbaren Struktur vorliegen.</p></div></article>
+          </div>
+        </div>
+      </section>
+
+      <section className="section knowledge-teaser">
         <div className="container">
           <div className="section-heading split-heading">
-            <div><span className="eyebrow">Kommunalwissen</span><h2>Praxiswissen für<br /><em>klare Entscheidungen.</em></h2></div>
-            <div><p>Konkrete Leitfäden zu wiederkehrenden Aufgaben, Leistungsgrenzen und pragmatischer externer Unterstützung.</p><Link className="text-link" href="/kommunalwissen">Alle Beiträge <ArrowIcon /></Link></div>
+            <div><span className="eyebrow">Kommunalwissen</span><h2>Praxiswissen für<br /><em>kommunale Abläufe.</em></h2></div>
+            <div><p>Checklisten, Entscheidungshilfen und konkrete Hinweise zur Organisation wiederkehrender Außendienst- und Backoffice-Aufgaben.</p><Link className="text-link" href="/kommunalwissen">Alle Beiträge <ArrowIcon /></Link></div>
           </div>
           <div className="article-grid home-article-grid">
             {knowledgeArticles.slice(0, 3).map((article, index) => <ArticleCard article={article} featured={index === 0} key={article.slug} />)}
@@ -157,8 +158,8 @@ export default function HomePage() {
 
       <section className="section closing-section">
         <div className="container closing-card">
-          <div><span className="eyebrow">Der einfachste nächste Schritt</span><h2>Zeigen Sie uns eine Routine, die liegen bleibt.</h2><p>Sie beschreiben Aufgabe, Gebiet und bisherigen Ablauf. Wir sagen klar, ob daraus ein sinnvoller Pilot werden kann – und wo die Leistungsgrenze liegen muss.</p></div>
-          <div className="closing-actions"><Link className="button" href="/anfrage">Pilot beschreiben <ArrowIcon /></Link><span>Unverbindlich · Ohne Systemwechsel</span></div>
+          <div><span className="eyebrow">Konkreten Bedarf klären</span><h2>Welche Aufgabe sollen wir Ihrer Verwaltung abnehmen?</h2><p>Nennen Sie uns Einsatzort, groben Umfang und gewünschten Zeitraum. Sie erhalten eine klare Rückmeldung zum möglichen Leistungsumfang und den nächsten Schritten.</p></div>
+          <div className="closing-actions"><Link className="button" href="/anfrage">Leistung anfragen <ArrowIcon /></Link><span>Unverbindliche Erstanfrage</span></div>
         </div>
       </section>
     </main>

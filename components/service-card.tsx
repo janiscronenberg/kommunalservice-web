@@ -13,7 +13,7 @@ export function ServiceCard({ service, index }: { service: Service; index?: numb
       <h3>{service.shortTitle}</h3>
       <p>{service.summary}</p>
       <Link className="text-link" href={`/leistungen/${service.slug}`} aria-label={`${service.shortTitle} ansehen`}>
-        Leistung ansehen <ArrowIcon />
+        Leistungsumfang <ArrowIcon />
       </Link>
     </article>
   );

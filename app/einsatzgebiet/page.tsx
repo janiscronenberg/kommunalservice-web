@@ -32,7 +32,7 @@ export default function AreaPage() {
             <span className="eyebrow">Außendienst</span>
             <h2>Routen brauchen kurze Wege.</h2>
             <p>Erfassungs- und Dokumentationsleistungen werden dort wirtschaftlich, wo mehrere Punkte oder Kommunen sinnvoll gebündelt werden können.</p>
-            <ul className="check-list"><li><CheckIcon /> Startregion Stuttgart und Baden-Württemberg</li><li><CheckIcon /> Pilotgebiete nach Entfernung und Routendichte</li><li><CheckIcon /> Ausbau über feste regionale Leistungspartner möglich</li><li><CheckIcon /> keine leeren bundesweiten Verfügbarkeitsversprechen</li></ul>
+            <ul className="check-list"><li><CheckIcon /> Startregion Stuttgart und Baden-Württemberg</li><li><CheckIcon /> weitere Gebiete nach Entfernung und Routendichte</li><li><CheckIcon /> gebündelte Routen für wirtschaftliche Konditionen</li><li><CheckIcon /> Einsatzmöglichkeit vor Angebot konkret geprüft</li></ul>
             <span className="eyebrow area-second-eyebrow">Backoffice & Daten</span>
             <h2>Digitale Routinen kennen keine Kreisgrenze.</h2>
             <p>Mängelmelder-Backoffice, Checklisten- und Datenpflege können nach sicherer Prozess- und Zugriffsabstimmung deutschlandweit starten.</p>
@@ -40,7 +40,7 @@ export default function AreaPage() {
         </div>
       </section>
 
-      <section className="section section-sand compact-cta-section"><div className="container compact-cta"><div><span className="eyebrow">Liegt Ihre Kommune außerhalb der Startregion?</span><h2>Fragen kostet keine Anfahrt.</h2></div><div><p>Wir prüfen offen, ob ein Vor-Ort-Pilot wirtschaftlich darstellbar ist oder ob zunächst ein digitales Modul besser passt.</p><Link className="button" href="/anfrage">Einsatzort nennen <ArrowIcon /></Link></div></div></section>
+      <section className="section section-soft compact-cta-section"><div className="container compact-cta"><div><span className="eyebrow">Liegt Ihre Kommune außerhalb der Startregion?</span><h2>Nennen Sie uns einfach den Einsatzort.</h2></div><div><p>Wir prüfen, ob sich die Leistung einzeln, als gebündelte Route oder digital wirtschaftlich anbieten lässt.</p><Link className="button" href="/anfrage">Einsatzort anfragen <ArrowIcon /></Link></div></div></section>
     </main>
   );
 }

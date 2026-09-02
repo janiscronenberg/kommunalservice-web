@@ -4,8 +4,8 @@ import { InquiryForm } from "../../components/inquiry-form";
 import { getService } from "../../lib/content";
 
 export const metadata: Metadata = {
-  title: "Pilotprojekt anfragen",
-  description: "Beschreiben Sie eine kommunale Routine und erhalten Sie eine klare Einordnung für einen abgegrenzten Pilot.",
+  title: "Kommunale Leistung anfragen",
+  description: "Fragen Sie Außendienst-, Dokumentations- oder Backoffice-Leistungen für Ihre Kommune unverbindlich an.",
   alternates: { canonical: "/anfrage" },
 };
 
@@ -20,18 +20,18 @@ export default async function InquiryPage({ searchParams }: PageProps) {
       <section className="inquiry-hero">
         <div className="container inquiry-layout">
           <div className="inquiry-copy">
-            <span className="eyebrow eyebrow-light">Unverbindlicher Pilot</span>
-            <h1>Welche Routine kostet Ihr Team gerade unnötig Zeit?</h1>
-            <p>Ein paar Eckdaten genügen. Sie erhalten keine Standardpräsentation, sondern eine ehrliche erste Einordnung: geeignet, anders abgrenzen oder bewusst intern belassen.</p>
+            <span className="eyebrow eyebrow-light">Leistung anfragen</span>
+            <h1>Beschreiben Sie kurz, was erledigt werden soll.</h1>
+            <p>Für eine erste Einschätzung brauchen wir keine fertige Leistungsbeschreibung. Einsatzort, grober Umfang und gewünschter Zeitraum genügen.</p>
             <ul>
-              <li><CheckIcon /> klare Rückmeldung zum Leistungsumfang</li>
-              <li><CheckIcon /> Vorschlag für einen überschaubaren Piloten</li>
-              <li><CheckIcon /> keine Verpflichtung und kein Systemwechsel</li>
+              <li><CheckIcon /> konkrete Rückmeldung zur Umsetzbarkeit</li>
+              <li><CheckIcon /> offene Punkte und benötigte Unterlagen</li>
+              <li><CheckIcon /> Grundlage für ein passendes Angebot</li>
             </ul>
-            {selected ? <div className="selected-service"><span>Ausgewählte Leistung</span><strong>{selected.shortTitle}</strong><p>{selected.pilot}</p></div> : null}
+            {selected ? <div className="selected-service"><span>Ausgewählte Leistung</span><strong>{selected.shortTitle}</strong><p>{selected.typicalScope}</p></div> : null}
           </div>
           <div className="form-card">
-            <div className="form-card-head"><span>Projektanfrage</span><h2>Routine kurz beschreiben</h2><p>Wir melden uns nach Sichtung mit den sinnvollsten nächsten Fragen.</p></div>
+            <div className="form-card-head"><span>Unverbindliche Anfrage</span><h2>Eckdaten übermitteln</h2><p>Je genauer Menge und Zeitraum sind, desto konkreter kann die erste Rückmeldung ausfallen.</p></div>
             <InquiryForm defaultService={selected?.slug} />
           </div>
         </div>

@@ -7,7 +7,7 @@ import { services } from "../../lib/content";
 export const metadata: Metadata = {
   title: "Leistungen für Städte und Gemeinden",
   description:
-    "Zehn klar abgegrenzte kommunale Routinedienstleistungen: Außendienst, Dokumentation, Backoffice und Bestandsdaten.",
+    "Zehn konkrete kommunale Dienstleistungen für Außendienst, Dokumentation, Backoffice und Bestandsdaten.",
   alternates: { canonical: "/leistungen" },
 };
 
@@ -18,14 +18,14 @@ export default function ServicesPage() {
         <div className="container page-hero-grid">
           <div>
             <span className="eyebrow">Leistungskatalog</span>
-            <h1>Entlastung, die man<br /><em>konkret beauftragen kann.</em></h1>
+            <h1>Aufgaben, die wir<br /><em>für Sie erledigen.</em></h1>
           </div>
           <div className="page-hero-aside">
-            <p>Keine diffuse „Unterstützung nach Bedarf“. Jedes Modul hat einen klaren Eingang, eine nachvollziehbare Bearbeitung und ein verwertbares Ergebnis.</p>
+            <p>Jede Leistung wird nach Gebiet, Menge, Termin und gewünschter Übergabe angeboten – einmalig, regelmäßig oder auf Abruf.</p>
             <ul>
-              <li><CheckIcon /> individuell kombinierbar</li>
-              <li><CheckIcon /> als Pilot testbar</li>
-              <li><CheckIcon /> ohne Systemwechsel startbar</li>
+              <li><CheckIcon /> Leistungen kombinierbar</li>
+              <li><CheckIcon /> transparenter Lieferumfang</li>
+              <li><CheckIcon /> vorhandene Formate nutzbar</li>
             </ul>
           </div>
         </div>
@@ -35,7 +35,7 @@ export default function ServicesPage() {
         <div className="container">
           <div className="catalog-intro">
             <span>10 Leistungsmodule</span>
-            <p>Außendienst und Backoffice lassen sich einzeln testen oder zu einer kommunalen Routine kombinieren.</p>
+            <p>Außendienst und Backoffice lassen sich einzeln beauftragen oder zu einem wiederkehrenden kommunalen Service kombinieren.</p>
           </div>
           <div className="service-grid catalog-grid">
             {services.map((service, index) => <ServiceCard service={service} index={index} key={service.slug} />)}
@@ -45,8 +45,8 @@ export default function ServicesPage() {
 
       <section className="section section-sand compact-cta-section">
         <div className="container compact-cta">
-          <div><span className="eyebrow">Keine passende Schublade?</span><h2>Die beste Routine beginnt oft mit einer Aufgabe, die intern niemand benannt hat.</h2></div>
-          <div><p>Beschreiben Sie uns den heutigen Ablauf. Wir prüfen, ob er sich klar, zulassungsfrei und wirtschaftlich als Pilot abgrenzen lässt.</p><Link className="button" href="/anfrage">Aufgabe beschreiben <ArrowIcon /></Link></div>
+          <div><span className="eyebrow">Ihre Aufgabe fehlt?</span><h2>Auch andere klar beschreibbare Routinearbeiten können übernommen werden.</h2></div>
+          <div><p>Nennen Sie uns den heutigen Ablauf, den groben Umfang und das gewünschte Ergebnis. Wir geben Ihnen eine konkrete Rückmeldung zur Umsetzbarkeit.</p><Link className="button" href="/anfrage">Aufgabe anfragen <ArrowIcon /></Link></div>
         </div>
       </section>
     </main>
