@@ -14,12 +14,12 @@ export default function ImprintPage() {
         {!configured ? <LegalMissing /> : null}
         <section>
           <h2>Angaben gemäß § 5 DDG</h2>
-          {configured ? <address><strong>{legalConfig.operator}{legalConfig.legalForm ? ` ${legalConfig.legalForm}` : ""}</strong><br />{legalConfig.street}<br />{legalConfig.city}</address> : <p>[Betreibername und Rechtsform]<br />[Straße und Hausnummer]<br />[PLZ und Ort]</p>}
+          <address><strong>{legalConfig.operator}{legalConfig.legalForm ? ` ${legalConfig.legalForm}` : ""}</strong><br />KommunalHilfe<br />{legalConfig.street || "[Straße und Hausnummer noch zu ergänzen]"}<br />{legalConfig.city || "[Postleitzahl und Ort noch zu ergänzen]"}</address>
         </section>
-        <section>
+        {legalConfig.representedBy ? <section>
           <h2>Vertreten durch</h2>
-          <p>{legalConfig.representedBy || "[Vertretungsberechtigte Person]"}</p>
-        </section>
+          <p>{legalConfig.representedBy}</p>
+        </section> : null}
         <section>
           <h2>Kontakt</h2>
           <p>Telefon: {legalConfig.phone || "[Telefonnummer]"}<br />E-Mail: {legalConfig.contactEmail || "[E-Mail-Adresse]"}</p>
@@ -28,7 +28,7 @@ export default function ImprintPage() {
         {legalConfig.vatId ? <section><h2>Umsatzsteuer-ID</h2><p>{legalConfig.vatId}</p></section> : null}
         <section>
           <h2>Redaktionell verantwortlich</h2>
-          <p>{legalConfig.representedBy || "[Name und Anschrift der verantwortlichen Person]"}</p>
+          <p>{legalConfig.representedBy || legalConfig.operator}<br />{legalConfig.street || "[Anschrift noch zu ergänzen]"}<br />{legalConfig.city}</p>
         </section>
         <section>
           <h2>Verbraucherstreitbeilegung</h2>

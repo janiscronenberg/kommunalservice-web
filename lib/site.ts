@@ -2,13 +2,13 @@ export const siteUrl = (process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:30
 export const siteIsLive = process.env.NEXT_PUBLIC_SITE_LIVE === "true";
 
 export const legalConfig = {
-  operator: process.env.NEXT_PUBLIC_LEGAL_NAME || "",
+  operator: process.env.NEXT_PUBLIC_LEGAL_NAME || "Janis Cronenberg",
   legalForm: process.env.NEXT_PUBLIC_LEGAL_FORM || "",
   street: process.env.NEXT_PUBLIC_LEGAL_STREET || "",
   city: process.env.NEXT_PUBLIC_LEGAL_CITY || "",
   representedBy: process.env.NEXT_PUBLIC_LEGAL_REPRESENTATIVE || "",
   contactEmail: process.env.NEXT_PUBLIC_CONTACT_EMAIL || "kommunalhilfe@gmail.com",
-  phone: process.env.NEXT_PUBLIC_CONTACT_PHONE || "",
+  phone: process.env.NEXT_PUBLIC_CONTACT_PHONE || "0170 8170605",
   vatId: process.env.NEXT_PUBLIC_VAT_ID || "",
   register: process.env.NEXT_PUBLIC_REGISTER || "",
   hostingProvider: process.env.NEXT_PUBLIC_HOSTING_PROVIDER || "",

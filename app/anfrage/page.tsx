@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { CheckIcon } from "../../components/icons";
 import { InquiryForm } from "../../components/inquiry-form";
 import { getService } from "../../lib/content";
+import { legalConfig } from "../../lib/site";
 
 export const metadata: Metadata = {
   title: "Kommunale Leistung anfragen",
@@ -23,6 +24,7 @@ export default async function InquiryPage({ searchParams }: PageProps) {
             <span className="eyebrow eyebrow-light">Leistung anfragen</span>
             <h1>Beschreiben Sie kurz, was erledigt werden soll.</h1>
             <p>Für eine erste Einschätzung brauchen wir keine fertige Leistungsbeschreibung. Einsatzort, grober Umfang und gewünschter Zeitraum genügen.</p>
+            <div className="direct-contact"><span>Ihr Ansprechpartner</span><strong>Janis Cronenberg</strong><a href={`mailto:${legalConfig.contactEmail}`}>{legalConfig.contactEmail}</a><a href={`tel:${legalConfig.phone.replace(/\s/g, "")}`}>{legalConfig.phone}</a></div>
             <ul>
               <li><CheckIcon /> konkrete Rückmeldung zur Umsetzbarkeit</li>
               <li><CheckIcon /> offene Punkte und benötigte Unterlagen</li>

@@ -7,6 +7,7 @@ import { SiteHeader } from "../components/site-header";
 import { siteConfig } from "../lib/content";
 import { absoluteUrl, legalConfig, siteIsLive, siteUrl } from "../lib/site";
 import "./globals.css";
+import "./refinements.css";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
