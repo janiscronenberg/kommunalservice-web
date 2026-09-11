@@ -93,7 +93,7 @@ export async function POST(request: Request) {
   }
 
   const service = getService(serviceSlug);
-  const serviceLabel = service?.shortTitle || "Andere / noch offene Routine";
+  const serviceLabel = service?.shortTitle || "Andere / noch offene Aufgabe";
   const html = `
     <h1>Neue Leistungsanfrage</h1>
     <p><strong>Kommune / Organisation:</strong> ${escapeHtml(organization)}</p>

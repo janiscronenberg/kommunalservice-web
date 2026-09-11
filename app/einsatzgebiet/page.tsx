@@ -4,7 +4,7 @@ import { ArrowIcon, CheckIcon } from "../../components/icons";
 
 export const metadata: Metadata = {
   title: "Einsatzgebiet",
-  description: "Kommunale Routinedienstleistungen für Städte, Gemeinden und kommunale Betriebe – regionaler Außendienst und deutschlandweites Backoffice.",
+  description: "Kommunale Außendienst-, Dokumentations- und Backoffice-Leistungen – regional vor Ort und digital deutschlandweit.",
   alternates: { canonical: "/einsatzgebiet" },
 };
 
@@ -34,7 +34,7 @@ export default function AreaPage() {
             <p>Erfassungs- und Dokumentationsleistungen werden dort wirtschaftlich, wo mehrere Punkte oder Kommunen sinnvoll gebündelt werden können.</p>
             <ul className="check-list"><li><CheckIcon /> Startregion Stuttgart und Baden-Württemberg</li><li><CheckIcon /> weitere Gebiete nach Entfernung und Routendichte</li><li><CheckIcon /> gebündelte Routen für wirtschaftliche Konditionen</li><li><CheckIcon /> Einsatzmöglichkeit vor Angebot konkret geprüft</li></ul>
             <span className="eyebrow area-second-eyebrow">Backoffice & Daten</span>
-            <h2>Digitale Routinen kennen keine Kreisgrenze.</h2>
+            <h2>Digitale Unterstützung kennt keine Kreisgrenze.</h2>
             <p>Mängelmelder-Backoffice, Checklisten- und Datenpflege können nach sicherer Prozess- und Zugriffsabstimmung deutschlandweit starten.</p>
           </div>
         </div>

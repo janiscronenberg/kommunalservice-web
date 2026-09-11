@@ -10,7 +10,7 @@ import { absoluteUrl } from "../lib/site";
 export const metadata: Metadata = {
   title: "Kommunale Dienstleistungen, die zuverlässig erledigt werden",
   description:
-    "KommunalRoutine übernimmt wiederkehrende Außendienst-, Dokumentations- und Backoffice-Aufgaben für Städte, Gemeinden und kommunale Betriebe.",
+    "KommunalHilfe übernimmt Außendienst-, Dokumentations- und Backoffice-Aufgaben für Städte, Gemeinden und kommunale Betriebe.",
   alternates: { canonical: "/" },
 };
 
@@ -47,7 +47,7 @@ export default function HomePage() {
             <span className="eyebrow">Dienstleistungen für Städte und Gemeinden</span>
             <h1>Mehr erledigen.<br /><em>Ohne mehr Personal.</em></h1>
             <p className="hero-lead">
-              KommunalRoutine übernimmt wiederkehrende Außendienst-, Dokumentations- und Backoffice-Aufgaben – verbindlich terminiert, einheitlich bearbeitet und so übergeben, dass Ihre Verwaltung direkt weiterarbeiten kann.
+              KommunalHilfe übernimmt Außendienst-, Dokumentations- und Backoffice-Aufgaben – verbindlich terminiert, einheitlich bearbeitet und so übergeben, dass Ihre Verwaltung direkt weiterarbeiten kann.
             </p>
             <div className="hero-actions">
               <Link className="button" href="/anfrage">Leistung anfragen <ArrowIcon /></Link>
@@ -134,7 +134,7 @@ export default function HomePage() {
 
       <section className="section section-soft">
         <div className="container use-case-layout">
-          <div><span className="eyebrow">Wann externe Unterstützung sinnvoll ist</span><h2>Wenn wichtige Routinen regelmäßig gegen dringendere Aufgaben verlieren.</h2></div>
+          <div><span className="eyebrow">Wann externe Unterstützung sinnvoll ist</span><h2>Wenn wichtige Aufgaben regelmäßig gegen dringendere Aufgaben verlieren.</h2></div>
           <div className="use-case-list">
             <article><span>01</span><div><h3>Saisonale Arbeitsspitzen</h3><p>Überwuchs, Starkregen, Aushänge oder Bestandsaufnahmen fallen in kurzer Zeit gebündelt an.</p></div></article>
             <article><span>02</span><div><h3>Viele kleine, verteilte Aufgaben</h3><p>Einzelne Vorgänge sind zu klein für eigene Ressourcen, ergeben zusammen aber einen planbaren Auftrag.</p></div></article>

@@ -226,6 +226,7 @@ h1 em, h2 em { color: var(--orange); font-style: normal; }
 .brand-inverse .brand-copy small { color: #99ada7; }
 .brand-inverse .brand-mark { background: rgba(255,255,255,.1); }
 .footer-intro > p { max-width: 360px; margin: 24px 0 0; font-size: 13px; }
+.footer-email { display: inline-block; margin-top: 12px; color: var(--white); font-size: 13px; text-decoration: underline; text-decoration-color: rgba(255,255,255,.35); text-underline-offset: 3px; }
 .footer-intro .footer-boundary { color: #8ea29c; font-size: 11px; }
 .footer-grid h3 { margin-bottom: 20px; color: var(--white); font-size: 13px; letter-spacing: .02em; }
 .footer-grid ul { margin: 0; padding: 0; display: grid; gap: 9px; list-style: none; }

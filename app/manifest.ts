@@ -2,8 +2,8 @@ import type { MetadataRoute } from "next";
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: "KommunalRoutine",
-    short_name: "KommunalRoutine",
+    name: "KommunalHilfe",
+    short_name: "KommunalHilfe",
     description: "Außendienst-, Dokumentations- und Backoffice-Leistungen für Kommunen",
     start_url: "/",
     display: "standalone",

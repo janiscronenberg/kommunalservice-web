@@ -18,9 +18,9 @@ export function GET() {
   const body = `<?xml version="1.0" encoding="UTF-8" ?>
   <rss version="2.0">
     <channel>
-      <title>KommunalRoutine – Kommunalwissen</title>
+      <title>KommunalHilfe – Kommunalwissen</title>
       <link>${absoluteUrl("/kommunalwissen")}</link>
-      <description>Praxiswissen zu kommunalen Routinedienstleistungen</description>
+      <description>Praxiswissen zu kommunalen Außendienst-, Dokumentations- und Backoffice-Aufgaben</description>
       <language>de-DE</language>
       ${items}
     </channel>

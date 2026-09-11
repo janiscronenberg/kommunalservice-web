@@ -53,8 +53,8 @@ export type KnowledgeArticle = {
 };
 
 export const siteConfig = {
-  name: "KommunalRoutine",
-  claim: "Kommunale Dienstleistungen",
+  name: "KommunalHilfe",
+  claim: "Externe Unterstützung für Kommunen",
   description:
     "Verlässliche Außendienst-, Dokumentations- und Backoffice-Leistungen für Städte, Gemeinden und kommunale Betriebe.",
 };
@@ -71,7 +71,7 @@ export const services: Service[] = [
     problem:
       "Viele kleine Außendienstaufgaben sind einzeln zu aufwendig, um sie konsequent zu terminieren. Gleichzeitig binden spontane Einzelwege wertvolle Zeit im Bauhof und in der Verwaltung.",
     benefit:
-      "Mehrere Routinen werden in einer Fahrt zusammengefasst. Ihre Kommune erhält ein einheitliches Ergebnisformat statt verteilter Notizen, Fotos und Rückfragen.",
+      "Mehrere Aufgaben werden in einer Fahrt zusammengefasst. Ihre Kommune erhält ein einheitliches Ergebnisformat statt verteilter Notizen, Fotos und Rückfragen.",
     useCases: [
       "Stadtmobiliar und Aushangstellen auf einer Route erfassen",
       "saisonale Überwuchs- und Sichtbarkeitsrunden",
@@ -485,7 +485,7 @@ export const services: Service[] = [
       {
         question: "Wer bewertet die Verkehrssicherheit?",
         answer:
-          "Die zuständige Fachstelle oder ein qualifizierter Prüfdienst. KommunalRoutine erhebt nur die vereinbarten sichtbaren Merkmale.",
+          "Die zuständige Fachstelle oder ein qualifizierter Prüfdienst. KommunalHilfe erhebt nur die vereinbarten sichtbaren Merkmale.",
       },
     ],
     relatedArticles: [
@@ -537,7 +537,7 @@ export const services: Service[] = [
       {
         question: "Wer gibt Inhalt und Frist vor?",
         answer:
-          "Ausschließlich die Kommune. KommunalRoutine übernimmt nur die organisatorische Ausführung und Dokumentation.",
+          "Ausschließlich die Kommune. KommunalHilfe übernimmt nur die organisatorische Ausführung und Dokumentation.",
       },
       {
         question: "Können Unterlagen auch gedruckt werden?",
@@ -547,7 +547,7 @@ export const services: Service[] = [
       {
         question: "Eignet sich der Service für einzelne Tafeln?",
         answer:
-          "Meist lohnt er sich bei mehreren Standorten oder in Kombination mit anderen kommunalen Routinen.",
+          "Meist lohnt er sich bei mehreren Standorten oder in Kombination mit anderen kommunalen Aufgaben.",
       },
     ],
     relatedArticles: [
@@ -685,7 +685,7 @@ export const services: Service[] = [
 export const knowledgeArticles: KnowledgeArticle[] = [
   {
     slug: "kommunale-routineaufgaben-auslagern",
-    title: "Kommunale Routineaufgaben auslagern: Was sich wirklich eignet",
+    title: "Kommunale Aufgaben auslagern: Was sich wirklich eignet",
     eyebrow: "Organisation",
     summary:
       "Welche wiederkehrenden Aufgaben externe Dienstleister sinnvoll übernehmen können – und welche Angaben eine brauchbare Leistungsbeschreibung braucht.",
@@ -697,11 +697,11 @@ export const knowledgeArticles: KnowledgeArticle[] = [
         heading: "Der beste Filter ist nicht die Größe der Aufgabe",
         paragraphs: [
           "Gerade kleine, wiederkehrende Tätigkeiten können unverhältnismäßig viel Koordinationszeit kosten. Entscheidend ist, ob Eingang, Bearbeitung und Ergebnis eindeutig beschrieben werden können.",
-          "Eine sinnvolle externe Routine produziert eine verwertbare Übergabe. Die Kommune muss danach nicht erst Fotos sortieren, Standorte erraten oder Rückfragen rekonstruieren.",
+          "Eine sinnvoll ausgelagerte Aufgabe produziert eine verwertbare Übergabe. Die Kommune muss danach nicht erst Fotos sortieren, Standorte erraten oder Rückfragen rekonstruieren.",
         ],
       },
       {
-        heading: "Vier Merkmale einer geeigneten Routine",
+        heading: "Vier Merkmale einer geeigneten Aufgabe",
         paragraphs: [
           "Ein externer Auftrag funktioniert besonders gut, wenn Umfang, Bearbeitung und Ergebnis vor dem ersten Einsatz verständlich beschrieben sind.",
         ],
@@ -722,9 +722,9 @@ export const knowledgeArticles: KnowledgeArticle[] = [
     ],
     faq: [
       {
-        question: "Welche Aufgaben sollten nicht als einfache Routine vergeben werden?",
+        question: "Welche Aufgaben sollten nicht auf diese Weise vergeben werden?",
         answer:
-          "Aufgaben mit hoheitlichen Entscheidungen, Fachprüfungen, Sicherheitsfreigaben oder unklarer Verantwortung gehören nicht in ein einfaches Routinemodell.",
+          "Aufgaben mit hoheitlichen Entscheidungen, Fachprüfungen, Sicherheitsfreigaben oder unklarer Verantwortung benötigen eine andere Vergabe- und Verantwortungsstruktur.",
       },
       {
         question: "Wie klein kann ein erster Auftrag sein?",
@@ -1289,7 +1289,7 @@ export const knowledgeArticles: KnowledgeArticle[] = [
       {
         question: "Wer erstellt den Kriterienkatalog?",
         answer:
-          "KommunalRoutine kann die Struktur vorbereiten. Die fachlich zuständige Stelle bestätigt Kriterien, Beispiele und Meldegrenzen.",
+          "KommunalHilfe kann die Struktur vorbereiten. Die fachlich zuständige Stelle bestätigt Kriterien, Beispiele und Meldegrenzen.",
       },
       {
         question: "Wie werden neue Falltypen behandelt?",

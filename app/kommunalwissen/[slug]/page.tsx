@@ -41,8 +41,8 @@ export default async function KnowledgeDetailPage({ params }: PageProps) {
       dateModified: article.updated,
       datePublished: article.updated,
       inLanguage: "de-DE",
-      author: { "@type": "Organization", name: "KommunalRoutine" },
-      publisher: { "@type": "Organization", name: "KommunalRoutine" },
+      author: { "@type": "Organization", name: "KommunalHilfe" },
+      publisher: { "@type": "Organization", name: "KommunalHilfe" },
       mainEntityOfPage: absoluteUrl(`/kommunalwissen/${article.slug}`),
     },
     {
@@ -64,7 +64,7 @@ export default async function KnowledgeDetailPage({ params }: PageProps) {
             <span className="eyebrow">{article.eyebrow}</span>
             <h1>{article.title}</h1>
             <p>{article.summary}</p>
-            <div className="article-byline"><span>KommunalRoutine Redaktion</span><i /><span>{article.readingMinutes} Minuten Lesezeit</span><i /><span>Aktualisiert: {formattedDate}</span></div>
+            <div className="article-byline"><span>KommunalHilfe Redaktion</span><i /><span>{article.readingMinutes} Minuten Lesezeit</span><i /><span>Aktualisiert: {formattedDate}</span></div>
           </div>
         </header>
 
@@ -103,7 +103,7 @@ export default async function KnowledgeDetailPage({ params }: PageProps) {
 
       <section className="section section-soft compact-cta-section">
         <div className="container compact-cta">
-          <div><span className="eyebrow">Passende Dienstleistung</span><h2>{service ? service.shortTitle : "Kommunale Routine"} konkret anfragen.</h2></div>
+          <div><span className="eyebrow">Passende Dienstleistung</span><h2>{service ? service.shortTitle : "Kommunale Aufgabe"} konkret anfragen.</h2></div>
           <div><p>Nennen Sie uns Einsatzort, ungefährer Umfang und gewünschten Zeitraum. Wir melden uns mit einer konkreten Einschätzung.</p><Link className="button" href={service ? `/anfrage?leistung=${service.slug}` : "/anfrage"}>Leistung anfragen <ArrowIcon /></Link></div>
         </div>
       </section>

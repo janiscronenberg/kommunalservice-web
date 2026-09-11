@@ -1,6 +1,6 @@
-# KommunalRoutine Website
+# KommunalHilfe Website
 
-Website und organische Lead-Engine für klar abgegrenzte kommunale Routine-, Erfassungs-, Dokumentations- und Backoffice-Dienstleistungen.
+Website und organische Lead-Engine für klar beschreibbare kommunale Außendienst-, Erfassungs-, Dokumentations- und Backoffice-Dienstleistungen.
 
 ## Enthalten
 

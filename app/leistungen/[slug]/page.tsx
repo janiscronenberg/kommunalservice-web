@@ -39,7 +39,7 @@ export default async function ServiceDetailPage({ params }: PageProps) {
       "@type": "Service",
       name: service.title,
       description: service.summary,
-      provider: { "@type": "Organization", name: "KommunalRoutine", url: absoluteUrl() },
+      provider: { "@type": "Organization", name: "KommunalHilfe", url: absoluteUrl() },
       areaServed: { "@type": "Country", name: "Deutschland" },
       audience: { "@type": "Audience", audienceType: "Städte, Gemeinden und kommunale Betriebe" },
       url: absoluteUrl(`/leistungen/${service.slug}`),

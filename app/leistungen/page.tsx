@@ -45,7 +45,7 @@ export default function ServicesPage() {
 
       <section className="section section-sand compact-cta-section">
         <div className="container compact-cta">
-          <div><span className="eyebrow">Ihre Aufgabe fehlt?</span><h2>Auch andere klar beschreibbare Routinearbeiten können übernommen werden.</h2></div>
+          <div><span className="eyebrow">Ihre Aufgabe fehlt?</span><h2>Auch andere klar beschreibbare kommunale Aufgaben können übernommen werden.</h2></div>
           <div><p>Nennen Sie uns den heutigen Ablauf, den groben Umfang und das gewünschte Ergebnis. Wir geben Ihnen eine konkrete Rückmeldung zur Umsetzbarkeit.</p><Link className="button" href="/anfrage">Aufgabe anfragen <ArrowIcon /></Link></div>
         </div>
       </section>

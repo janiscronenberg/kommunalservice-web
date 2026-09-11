@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { services, siteConfig } from "../lib/content";
+import { legalConfig } from "../lib/site";
 import { ArrowIcon } from "./icons";
 
 export function SiteFooter() {
@@ -29,6 +30,7 @@ export function SiteFooter() {
             </span>
           </Link>
           <p>{siteConfig.description}</p>
+          <a className="footer-email" href={`mailto:${legalConfig.contactEmail}`}>{legalConfig.contactEmail}</a>
         </div>
 
         <div>

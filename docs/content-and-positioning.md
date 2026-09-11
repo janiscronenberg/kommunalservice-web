@@ -2,7 +2,7 @@
 
 ## Positionierung
 
-KommunalRoutine verkauft klar beschreibbare Erfassungs-, Dokumentations- und organisatorische Routinen. Die Seite verwendet bewusst keine Formulierungen, die eine hoheitliche Entscheidung, technische Abnahme, Sachverständigenprüfung oder Bewachung versprechen.
+KommunalHilfe verkauft klar beschreibbare Erfassungs-, Dokumentations- und organisatorische Leistungen. Die Seite verwendet bewusst keine Formulierungen, die eine hoheitliche Entscheidung, technische Abnahme, Sachverständigenprüfung oder Bewachung versprechen.
 
 ## Inhaltsmodell
 

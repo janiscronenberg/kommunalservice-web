@@ -7,7 +7,7 @@ export const legalConfig = {
   street: process.env.NEXT_PUBLIC_LEGAL_STREET || "",
   city: process.env.NEXT_PUBLIC_LEGAL_CITY || "",
   representedBy: process.env.NEXT_PUBLIC_LEGAL_REPRESENTATIVE || "",
-  contactEmail: process.env.NEXT_PUBLIC_CONTACT_EMAIL || "",
+  contactEmail: process.env.NEXT_PUBLIC_CONTACT_EMAIL || "kommunalhilfe@gmail.com",
   phone: process.env.NEXT_PUBLIC_CONTACT_PHONE || "",
   vatId: process.env.NEXT_PUBLIC_VAT_ID || "",
   register: process.env.NEXT_PUBLIC_REGISTER || "",

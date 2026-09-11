@@ -63,7 +63,7 @@ export function InquiryForm({ defaultService = "" }: { defaultService?: string }
         <label>
           <span>Interessante Leistung</span>
           <select name="service" defaultValue={defaultService}>
-            <option value="">Noch offen / andere Routine</option>
+            <option value="">Noch offen / andere Aufgabe</option>
             {services.map((service) => <option value={service.slug} key={service.slug}>{service.shortTitle}</option>)}
           </select>
         </label>
