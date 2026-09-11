@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { siteConfig } from "../lib/content";
+import { BrandMark } from "./brand-mark";
 import { ArrowIcon } from "./icons";
 
 const nav = [
@@ -24,14 +25,10 @@ export function SiteHeader() {
       <header className="site-header">
         <div className="container header-inner">
           <Link className="brand" href="/" aria-label={`${siteConfig.name} Startseite`}>
-            <span className="brand-mark" aria-hidden="true">
-              <span />
-              <span />
-              <span />
-            </span>
+            <BrandMark />
             <span className="brand-copy">
-              <strong>{siteConfig.name}</strong>
-              <small>{siteConfig.claim}</small>
+              <strong className="brand-name"><span>Kommunal</span><span>Hilfe</span></strong>
+              <small>Für Städte und Gemeinden</small>
             </span>
           </Link>
 

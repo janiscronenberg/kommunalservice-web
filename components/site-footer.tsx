@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { services, siteConfig } from "../lib/content";
 import { legalConfig } from "../lib/site";
+import { BrandMark } from "./brand-mark";
 import { ArrowIcon } from "./icons";
 
 export function SiteFooter() {
@@ -19,14 +20,10 @@ export function SiteFooter() {
       <div className="container footer-grid">
         <div className="footer-intro">
           <Link className="brand brand-inverse" href="/">
-            <span className="brand-mark" aria-hidden="true">
-              <span />
-              <span />
-              <span />
-            </span>
+            <BrandMark />
             <span className="brand-copy">
-              <strong>{siteConfig.name}</strong>
-              <small>{siteConfig.claim}</small>
+              <strong className="brand-name"><span>Kommunal</span><span>Hilfe</span></strong>
+              <small>Für Städte und Gemeinden</small>
             </span>
           </Link>
           <p>{siteConfig.description}</p>

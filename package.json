@@ -11,6 +11,8 @@
     "check": "npm run validate:content && npm run typecheck && npm run build"
   },
   "dependencies": {
+    "@fontsource-variable/manrope": "^5.2.8",
+    "@fontsource-variable/source-sans-3": "^5.2.8",
     "next": "^16.0.0",
     "react": "^19.1.0",
     "react-dom": "^19.1.0"
